@@ -19,8 +19,9 @@ public class Test {
 //        Object result = new Solution5().longestPalindrome("abccbaaadd");
 //        Object result = new Solution5().longestPalindrome(s);
 //        Object result = new Solution6().convert("LEETCODEISHIRING", 3);
-        Object result = new Solution6().convert("PAYPALISHIRING", 3);
+//        Object result = new Solution6().convert("PAYPALISHIRING", 3);
 //        Object result = new Solution6().convert("AB", 1);
+        Object result = new Solution7().reverse(1534236469);
         System.out.print(result);
     }
 }
