@@ -1,54 +1,39 @@
 package com.wormchaos.lc.sliding_window;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by wormchaos on 2019-12-18.
  * 字形变换
  */
 public class Solution6 {
     public String convert(String s, int numRows) {
-        char[][] a = new char[s.length()][numRows];
-        for (int i = 0; i < s.length(); i++) {
-            for (int j = 0; j < numRows; j++) {
-                a[i][j] = 0;
-            }
-        }
-        if(numRows == 1) {
+
+        if (numRows == 1) {
             return s;
         }
-        int x = 0;
-        int y = 0;
-        boolean isDown = true;
-        for (int i = 0; i < s.length(); i++) {
-            a[x][y] = s.charAt(i);
-            if (isDown) {
-                if (y == numRows - 1) {
-                    y--;
-                    x++;
-                    isDown = false;
-                } else {
-                    y++;
-                }
-            } else {
-                if (y == 0) {
-                    isDown = true;
-                    y++;
-                } else {
-                    y--;
-                    x++;
-                }
-            }
+        int q = 2 * (numRows - 1);
+        char[] a = new char[(s.length() / q + 1) * q];
+        for (int i= 0; i< s.length(); i++) {
+            a[i] = s.charAt(i);
         }
-        String result = "";
-        for (int j = 0; j < numRows; j++) {
-            for (int i = 0; i < s.length(); i++) {
-                if (a[i][j] > 0) {
-                    result += a[i][j];
-                }
-//                System.out.print(a[i][j]);
-            }
-//            System.out.println();
-        }
-        return result;
 
+        StringBuffer sb = new StringBuffer("");
+        for (int i = 0; i < numRows; i++) {
+            for (int j = 0; j < (s.length() - 1) / q + 1; j++) {
+                if(a[i + j * q] > 0) {
+                    sb.append(a[i + j * q]);
+                }
+                if( i > 0 && i < numRows -1) {
+                    if(a[(j + 1) * q - i] > 0) {
+                        sb.append(a[(j + 1) * q - i]);
+                    }
+                }
+            }
+        }
+
+        return sb.toString();
     }
+
 }
