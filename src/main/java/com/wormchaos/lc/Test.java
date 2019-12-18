@@ -24,7 +24,9 @@ public class Test {
 //        Object result = new Solution7().reverse(1534236469);
 //        Object result = new Solution8().myAtoi(String.valueOf(Integer.MIN_VALUE));
 //        Object result = new Solution8().myAtoi("2147483646");
-        Object result = new Solution9().isPalindrome(13222310);
+//        Object result = new Solution9().isPalindrome(13222310);
+//        Object result = new Solution10().maxArea(new int[]{1,8,6,2,5,4,8,3,7});
+        Object result = new Solution10().maxArea(new int[]{2,3,4,5,18,17,6});
         System.out.print(result);
     }
 }
