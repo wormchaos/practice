@@ -23,7 +23,8 @@ public class Test {
 //        Object result = new Solution6().convert("AB", 1);
 //        Object result = new Solution7().reverse(1534236469);
 //        Object result = new Solution8().myAtoi(String.valueOf(Integer.MIN_VALUE));
-        Object result = new Solution8().myAtoi("2147483646");
+//        Object result = new Solution8().myAtoi("2147483646");
+        Object result = new Solution9().isPalindrome(13222310);
         System.out.print(result);
     }
 }
