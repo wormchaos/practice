@@ -21,7 +21,9 @@ public class Test {
 //        Object result = new Solution6().convert("LEETCODEISHIRING", 3);
 //        Object result = new Solution6().convert("PAYPALISHIRING", 3);
 //        Object result = new Solution6().convert("AB", 1);
-        Object result = new Solution7().reverse(1534236469);
+//        Object result = new Solution7().reverse(1534236469);
+//        Object result = new Solution8().myAtoi(String.valueOf(Integer.MIN_VALUE));
+        Object result = new Solution8().myAtoi("2147483646");
         System.out.print(result);
     }
 }
