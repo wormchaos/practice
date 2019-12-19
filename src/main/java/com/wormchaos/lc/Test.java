@@ -32,7 +32,8 @@ public class Test {
 //        Object result = new Solution12().intToRoman(1994);
 //        Object result = new Solution12().intToRoman(191);
 //        Object result = new Solution12().intToRoman(200);
-        Object result = new Solution13().romanToInt("LVIII");
+//        Object result = new Solution13().romanToInt("LVIII");
+        Object result = new Solution14().longestCommonPrefix(new String[]{"flower","flow","flight"});
         System.out.print(result);
     }
 }
