@@ -25,8 +25,13 @@ public class Test {
 //        Object result = new Solution8().myAtoi(String.valueOf(Integer.MIN_VALUE));
 //        Object result = new Solution8().myAtoi("2147483646");
 //        Object result = new Solution9().isPalindrome(13222310);
-//        Object result = new Solution10().maxArea(new int[]{1,8,6,2,5,4,8,3,7});
-        Object result = new Solution10().maxArea(new int[]{2,3,4,5,18,17,6});
-        System.out.print(result);
+//        Object result = new Solution12().intToRoman(3);
+//        Object result = new Solution12().intToRoman(4);
+//        Object result = new Solution12().intToRoman(9);
+//        Object result = new Solution12().intToRoman(58);
+//        Object result = new Solution12().intToRoman(1994);
+//        Object result = new Solution12().intToRoman(191);
+//        Object result = new Solution12().intToRoman(200);
+//        System.out.print(result);
     }
 }

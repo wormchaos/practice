@@ -3,7 +3,7 @@ package com.wormchaos.lc.sliding_window;
 /**
  * Created by wormchaos on 2019-12-18.
  */
-public class Solution10 {
+public class Solution11 {
     /**
      * 双指针
      * @param height
