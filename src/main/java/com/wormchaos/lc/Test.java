@@ -33,7 +33,11 @@ public class Test {
 //        Object result = new Solution12().intToRoman(191);
 //        Object result = new Solution12().intToRoman(200);
 //        Object result = new Solution13().romanToInt("LVIII");
-        Object result = new Solution14().longestCommonPrefix(new String[]{"flower","flow","flight"});
+//        Object result = new Solution14().longestCommonPrefix(new String[]{"flower","flow","flight"});
+//        Object result = new Solution15().threeSum(new int[]{-1, 0, 1, 2, -1, -4});
+//        Object result = new Solution15().threeSum(new int[]{3,0,-2,-1,1,2});
+//        Object result = new Solution15().threeSum(new int[]{-4,-2,-2,-2,0,1,2,2,2,3,3,4,4,6,6});
+        Object result = new Solution15().threeSum(new int[]{0,0,0});
         System.out.print(result);
     }
 }
