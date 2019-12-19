@@ -32,6 +32,7 @@ public class Test {
 //        Object result = new Solution12().intToRoman(1994);
 //        Object result = new Solution12().intToRoman(191);
 //        Object result = new Solution12().intToRoman(200);
-//        System.out.print(result);
+        Object result = new Solution13().romanToInt("LVIII");
+        System.out.print(result);
     }
 }
