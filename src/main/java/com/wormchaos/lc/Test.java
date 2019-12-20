@@ -51,10 +51,12 @@ public class Test {
 //        print(result);
 //        Object result = new Solution20().isValid("{[]}");
 //        System.out.print(result);
-        ListNode l1 = createListNode("1->2->3->4->5");
-        ListNode l2 = createListNode("1->2->3->4->5->6");
-        ListNode result = new Solution21().mergeTwoLists(l1, l2);
-        print(result);
+//        ListNode l1 = createListNode("3->4->5");
+//        ListNode l2 = createListNode("4->5");
+//        ListNode result = new Solution21().mergeTwoLists(l1, l2);
+//        print(result);
+        Object result = new Solution22().generateParenthesis(3);
+        System.out.print(result);
     }
 
     private static void print(ListNode l) {
