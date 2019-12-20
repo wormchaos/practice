@@ -7,13 +7,38 @@ import com.wormchaos.lc.toolbean.ListNode;
  */
 public class Solution19 {
 
+
+    /**
+     * 双指针
+     * @param head
+     * @param n
+     * @return
+     */
+    public ListNode removeNthFromEnd(ListNode head, int n) {
+        ListNode node = new ListNode(0);
+        node.next = head;
+        ListNode node1 = node;
+        ListNode node2 = node;
+        for (int i=0; i < n + 1; i++) {
+            node1 = node1.next;
+        }
+        while(node1 != null) {
+            node1 = node1.next;
+            node2 = node2.next;
+        }
+        node2.next = node2.next.next;
+
+        return node.next;
+    }
+
+
     /**
      * 两次遍历 哑结点
      * @param head
      * @param n
      * @return
      */
-    public ListNode removeNthFromEnd(ListNode head, int n) {
+    public ListNode removeNthFromEndV2(ListNode head, int n) {
         ListNode node = new ListNode(0);
         node.next = head;
         ListNode first = head;
