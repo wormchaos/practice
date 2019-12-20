@@ -1,6 +1,7 @@
 package com.wormchaos.lc;
 
 import com.wormchaos.lc.sliding_window.*;
+import com.wormchaos.lc.toolbean.ListNode;
 
 /**
  * Created by wormchaos on 2019-12-16.
@@ -42,7 +43,31 @@ public class Test {
 //        Object result = new Solution16().threeSumClosest(new int[]{0,1,2}, 1);
 //        Object result = new Solution17().letterCombinations("2");
 //        Object result = new Solution18().fourSum(new int[]{-3,-2,-1,0,0,1,2,3}, 0);
-        Object result = new Solution18().fourSum(new int[]{-1,-5,-5,-3,2,5,0,4}, -7);
-        System.out.print(result);
+//        Object result = new Solution18().fourSum(new int[]{-1,-5,-5,-3,2,5,0,4}, -7);
+//        ListNode l = createListNode("1->2->3->4->5");
+//        ListNode result = new Solution19().removeNthFromEnd(l, 2);
+        ListNode l = createListNode("1->2");
+        ListNode result = new Solution19().removeNthFromEnd(l, 2);
+        print(result);
+//        System.out.print(result);
+    }
+
+    private static void print(ListNode l) {
+        while (l != null) {
+            System.out.print(l.val + "->");
+            l = l.next;
+        }
+        System.out.println();
+    }
+
+    private static ListNode createListNode(String s) {
+        String[] t = s.trim().split("->");
+        ListNode listNode = new ListNode(Integer.parseInt(t[0]));
+        ListNode result = listNode;
+        for (int i=1; i <t.length; i++) {
+            listNode.next = new ListNode(Integer.parseInt(t[i]));
+            listNode = listNode.next;
+        }
+        return result;
     }
 }
