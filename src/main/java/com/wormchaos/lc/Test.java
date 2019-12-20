@@ -39,7 +39,8 @@ public class Test {
 //        Object result = new Solution15().threeSum(new int[]{-4,-2,-2,-2,0,1,2,2,2,3,3,4,4,6,6});
 //        Object result = new Solution15().threeSum(new int[]{0,0,0});
 //        Object result = new Solution16().threeSumClosest(new int[]{-1,2,1,-4}, 1);
-        Object result = new Solution16().threeSumClosest(new int[]{0,1,2}, 1);
+//        Object result = new Solution16().threeSumClosest(new int[]{0,1,2}, 1);
+        Object result = new Solution17().letterCombinations("2");
         System.out.print(result);
     }
 }
