@@ -46,10 +46,11 @@ public class Test {
 //        Object result = new Solution18().fourSum(new int[]{-1,-5,-5,-3,2,5,0,4}, -7);
 //        ListNode l = createListNode("1->2->3->4->5");
 //        ListNode result = new Solution19().removeNthFromEnd(l, 2);
-        ListNode l = createListNode("1->2");
-        ListNode result = new Solution19().removeNthFromEnd(l, 2);
-        print(result);
-//        System.out.print(result);
+//        ListNode l = createListNode("1->2");
+//        ListNode result = new Solution19().removeNthFromEnd(l, 2);
+//        print(result);
+        Object result = new Solution20().isValid("{[]}");
+        System.out.print(result);
     }
 
     private static void print(ListNode l) {
