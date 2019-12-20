@@ -49,8 +49,12 @@ public class Test {
 //        ListNode l = createListNode("1->2");
 //        ListNode result = new Solution19().removeNthFromEnd(l, 2);
 //        print(result);
-        Object result = new Solution20().isValid("{[]}");
-        System.out.print(result);
+//        Object result = new Solution20().isValid("{[]}");
+//        System.out.print(result);
+        ListNode l1 = createListNode("1->2->3->4->5");
+        ListNode l2 = createListNode("1->2->3->4->5->6");
+        ListNode result = new Solution21().mergeTwoLists(l1, l2);
+        print(result);
     }
 
     private static void print(ListNode l) {
@@ -65,7 +69,7 @@ public class Test {
         String[] t = s.trim().split("->");
         ListNode listNode = new ListNode(Integer.parseInt(t[0]));
         ListNode result = listNode;
-        for (int i=1; i <t.length; i++) {
+        for (int i = 1; i < t.length; i++) {
             listNode.next = new ListNode(Integer.parseInt(t[i]));
             listNode = listNode.next;
         }
