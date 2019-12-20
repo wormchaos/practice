@@ -40,7 +40,9 @@ public class Test {
 //        Object result = new Solution15().threeSum(new int[]{0,0,0});
 //        Object result = new Solution16().threeSumClosest(new int[]{-1,2,1,-4}, 1);
 //        Object result = new Solution16().threeSumClosest(new int[]{0,1,2}, 1);
-        Object result = new Solution17().letterCombinations("2");
+//        Object result = new Solution17().letterCombinations("2");
+//        Object result = new Solution18().fourSum(new int[]{-3,-2,-1,0,0,1,2,3}, 0);
+        Object result = new Solution18().fourSum(new int[]{-1,-5,-5,-3,2,5,0,4}, -7);
         System.out.print(result);
     }
 }
