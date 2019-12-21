@@ -8,7 +8,22 @@ import java.util.List;
  * 删除数组重复项
  */
 public class Solution26 {
+
+    /**
+     * 双指针优化
+     */
     public int removeDuplicates(int[] nums) {
+        // 每次找到一个不一样的值便替换当前值和顺位
+        int i=0;
+        for(int j = 1; j < nums.length; j++) {
+            if(nums[j] != nums[i]) {
+                nums[i] = nums[j];
+                i++;
+            }
+        }
+        return i+1;
+    }
+    public int removeDuplicatesV1(int[] nums) {
         if(nums.length <=1) {
             return nums.length;
         }
@@ -19,6 +34,7 @@ public class Solution26 {
                 for(int j=i;j<k-1;j++) {
                     nums[j] = nums[j + 1];
                 }
+                i--;
                 k--;
             }
         }
