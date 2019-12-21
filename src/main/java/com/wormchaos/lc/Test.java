@@ -54,7 +54,7 @@ public class Test {
 //        ListNode l1 = createListNode("3->4->5");
 //        ListNode l2 = createListNode("4->5");
 //        ListNode result = new Solution21().mergeTwoLists(l1, l2);
-//        print(result);
+//        print(result); test
         Object result = new Solution22().generateParenthesis(3);
         System.out.print(result);
     }
