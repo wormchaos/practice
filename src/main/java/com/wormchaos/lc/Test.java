@@ -67,9 +67,25 @@ public class Test {
         // lists[1] = l2;
         // lists[2] = l3;
         // ListNode result = new Solution23().mergeKLists(lists);
-        ListNode[] lists = new ListNode[1];
-        ListNode l2 = null;
-        lists[0] = l2;
+        // ListNode[] lists = new ListNode[1];
+        // ListNode l2 = null;
+        // lists[0] = l2;
+        // ListNode result = new Solution23().mergeKLists(lists);
+        ListNode l1 = createListNode("-10,-9,-9,-3,-1,-1,0");
+        ListNode l2 = createListNode("-5");
+        ListNode l3 = createListNode("4");
+        ListNode l4 = createListNode("-8");
+        ListNode l5 = null;
+        ListNode l6 = createListNode("-9,-6,-5,-4,-2,2,3");
+        ListNode l7 = createListNode("-3,-3,-2,-1,0");
+        ListNode[] lists = new ListNode[7];
+        lists[0] = l1;
+        lists[1] = l2;
+        lists[2] = l3;
+        lists[3] = l4;
+        lists[4] = l5;
+        lists[5] = l6;
+        lists[6] = l7;
         ListNode result = new Solution23().mergeKLists(lists);
         print(result);
     }
@@ -83,7 +99,13 @@ public class Test {
     }
 
     private static ListNode createListNode(String s) {
-        String[] t = s.trim().split("->");
+        // String[] t = s.trim().split("->");
+        String[] t;
+        if(s.contains(",")) {
+            t = s.trim().split(",");
+        } else {
+            t = s.trim().split("->");
+        }
         ListNode listNode = new ListNode(Integer.parseInt(t[0]));
         ListNode result = listNode;
         for (int i = 1; i < t.length; i++) {
