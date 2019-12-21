@@ -1,6 +1,9 @@
 package com.wormchaos.lc.sliding_window;
 
 import com.wormchaos.lc.toolbean.ListNode;
+
+import jdk.nashorn.internal.ir.ForNode;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,11 +11,20 @@ import java.util.List;
  * Created by wormchaos on 2019-12-21.
  * 合并多个指针
  */
-public class Solution26 {
+public class Solution23 {
 
     public ListNode mergeKLists(ListNode[] lists) {
+        if(lists.length == 0) {
+            return null;
+        }
         ListNode head = new ListNode(-1);
+        ListNode record = head;
         int count = 0;
+        for(ListNode n : lists) {
+            if(n == null) {
+                count++;
+            }
+        }
         while(count < lists.length) {
             int i;
             int min = Integer.MAX_VALUE;
@@ -23,14 +35,15 @@ public class Solution26 {
                     min = n.val;
                     temp = i;
                     head.next = n;
-                    if(head.next == null) {
-                        count++;
-                    }
                 }
             }
+            head = head.next;
             lists[temp] = lists[temp].next;
+            if(lists[temp] == null) {
+                count++;
+            }
         }
-        return head.next;
+        return record.next;
     }
 
 }

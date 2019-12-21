@@ -3,6 +3,8 @@ package com.wormchaos.lc;
 import com.wormchaos.lc.sliding_window.*;
 import com.wormchaos.lc.toolbean.ListNode;
 
+import java.util.*;
+
 /**
  * Created by wormchaos on 2019-12-16.
  */
@@ -51,12 +53,25 @@ public class Test {
 //        print(result);
 //        Object result = new Solution20().isValid("{[]}");
 //        System.out.print(result);
-//        ListNode l1 = createListNode("3->4->5");
-//        ListNode l2 = createListNode("4->5");
-//        ListNode result = new Solution21().mergeTwoLists(l1, l2);
-//        print(result); test
-        Object result = new Solution22().generateParenthesis(3);
-        System.out.print(result);
+    //    ListNode l1 = createListNode("3->4->5");
+    //    ListNode l2 = createListNode("4->5");
+    //    ListNode result = new Solution21().mergeTwoLists(l1, l2);
+    //    print(result); 
+        // Object result = new Solution22().generateParenthesis(3);
+        // System.out.print(result);
+        // ListNode l1 = createListNode("1->4->5");
+        // ListNode l2 = createListNode("1->3->4");
+        // ListNode l3 = createListNode("2->6");
+        // ListNode[] lists = new ListNode[3];
+        // lists[0] = l1;
+        // lists[1] = l2;
+        // lists[2] = l3;
+        // ListNode result = new Solution23().mergeKLists(lists);
+        ListNode[] lists = new ListNode[1];
+        ListNode l2 = null;
+        lists[0] = l2;
+        ListNode result = new Solution23().mergeKLists(lists);
+        print(result);
     }
 
     private static void print(ListNode l) {
