@@ -13,12 +13,15 @@ public class Solution26 {
      * 双指针优化
      */
     public int removeDuplicates(int[] nums) {
+        if(nums.length <=1) {
+            return nums.length;
+        }
         // 每次找到一个不一样的值便替换当前值和顺位
         int i=0;
         for(int j = 1; j < nums.length; j++) {
             if(nums[j] != nums[i]) {
-                nums[i] = nums[j];
                 i++;
+                nums[i] = nums[j];
             }
         }
         return i+1;
