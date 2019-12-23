@@ -8,39 +8,42 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by wormchaos on 2019-12-21.
- * k个链表对调位置
+ * Created by wormchaos on 2019-12-21. k个链表对调位置
  */
 public class Solution25 {
 
     public ListNode reverseKGroup(ListNode head, int k) {
-        if(null == head) {
+        if (null == head) {
             return null;
         }
-        ListNode zero = new ListNode(-1);
-        zero.next = head;
-        // for(int i )
-        deal(head, k);
-        return zero;
-        
+
+        return deal(head, k);
+
     }
 
-    private ListNode deal(ListNode head, int k) {
-        // l1
-        ListNode h1 = head;
-        ListNode h2;
-        for(int i=0;i<k -1;i++) {
-            if(null == head) {
-                return head;
+    private ListNode deal(ListNode list, int k) {
+        ListNode cur = list;
+        ListNode pre = list;
+        // 判断临界
+        for (int i = 0; i < k; i++) {
+            if (list == null) {
+                return pre;
             }
-            head = head.next;
+            list = list.next;
         }
-        h2 = head;
-        head = head.next;
-        h1.next = head;
-        head.next = h1.next;
-        h2.next = h1;
-        return h1;
+        ListNode p = cur.next;
+
+        cur.next =null;
+        ListNode temp;
+        // 逐个变化
+        for (int i = 0; i < k - 1; i++) {
+            temp = p;
+            p = p.next;
+            temp.next = cur;
+            cur = temp;
+        }
+        pre.next = deal(p, k);
+        return cur;
     }
 
 }
