@@ -87,8 +87,10 @@ public class Test {
         // lists[5] = l6;
         // lists[6] = l7;
         // ListNode result = new Solution23().mergeKLists(lists);
-        ListNode l1 = createListNode("1->2->3->4");
-        ListNode result = new Solution24().swapPairs(l1);
+        // ListNode l1 = createListNode("1->2->3->4");
+        // ListNode result = new Solution24().swapPairs(l1);
+        ListNode l1 = createListNode("1->2->3->4->5");
+        ListNode result = new Solution25().reverseKGroup(l1, 4);
         print(result);
     }
 
