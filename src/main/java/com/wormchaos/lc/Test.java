@@ -97,7 +97,8 @@ public class Test {
 //        Object result = new Solution30().findSubstring("barfoothefoobarman", new String[]{"foo","bar"});
 //        Object result = new Solution30().findSubstring("wordgoodgoodgoodbestword", new String[]{"word","good","best","word"});
         // Object result = new Solution30().findSubstring("wordgoodgoodgoodbestword", new String[]{"word","good","best","good"});
-        Object result = new Solution38().countAndSay(5);
+        // Object result = new Solution38().countAndSay(5);
+        Object result = new Solution53().maxSubArray(new int[]{-2,1,-3,4,-1,2,1,-5,4});
         System.out.print(result);
     }
 
