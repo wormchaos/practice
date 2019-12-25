@@ -11,7 +11,7 @@ import java.util.List;
  * Created by wormchaos on 2019-12-23
  * 移除元素
  */
-public class Solution27 {
+public class Solution28 {
 
     public int removeElement(int[] nums, int val) {
         if(nums.length == 0) {

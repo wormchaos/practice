@@ -92,7 +92,10 @@ public class Test {
         // ListNode l1 = createListNode("1->2->3->4->5");
         // ListNode result = new Solution25().reverseKGroup(l1, 4);
         // print(result);
-        Object result = new Solution27().removeElement(new int[]{0,1,2,2,3,0,4,2}, 2);
+//        Object result = new Solution27().removeElement(new int[]{0,1,2,2,3,0,4,2}, 2);
+//        Object result = new Solution30().findSubstring("barfoothefoobarman", new String[]{"foo","bar"});
+//        Object result = new Solution30().findSubstring("wordgoodgoodgoodbestword", new String[]{"word","good","best","word"});
+        Object result = new Solution30().findSubstring("wordgoodgoodgoodbestword", new String[]{"word","good","best","good"});
         System.out.print(result);
     }
 
