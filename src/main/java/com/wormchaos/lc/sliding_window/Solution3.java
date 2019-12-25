@@ -9,27 +9,28 @@ import java.util.Set;
 public class Solution3 {
 
     public static void main(String... args) {
-//        String s = "wobgrovw";
+        // String s = "wobgrovw";
         String s = "abcab";
         System.out.print(lengthOfLongestSubstring(s));
     }
+
     private static int lengthOfLongestSubstring(String s) {
-        if(s.length() == 0) {
+        if (s.length() == 0) {
             return 0;
         }
         int max = 1;
         Set<Integer> set = new HashSet<>();
         int len = 0;
         int left = 0;
-        for (int i=0; i < s.length(); i++) {
+        for (int i = 0; i < s.length(); i++) {
             len++;
             int is = (int) s.charAt(i);
-            while(set.contains(is)) {
+            while (set.contains(is)) {
                 set.remove((int) s.charAt(left));
                 len--;
                 left++;
             }
-            if(len > max) {
+            if (len > max) {
                 max = len;
             }
             set.add(is);
@@ -37,29 +38,30 @@ public class Solution3 {
 
         return max;
     }
+
     private static int lengthOfLongestSubstringV2(String s) {
-        if(s.length() == 0) {
+        if (s.length() == 0) {
             return 0;
         }
         int max = 1;
         Set<Integer> set = new HashSet<>();
-        int i =0;
+        int i = 0;
         int len = 1;
         set.add((int) s.charAt(0));
         // 当前头i, 长度len，尾坐标i+len - 1
-        while(i + len < s.length()) {
+        while (i + len < s.length()) {
             int newChar = (int) s.charAt(i + len);
             if (set.contains(newChar)) {
-                for (int k=i; k < i + len; k++) {
+                for (int k = i; k < i + len; k++) {
                     if ((int) s.charAt(k) == newChar) {
-                        if( k == i + len - 1) {
+                        if (k == i + len - 1) {
                             i = i + len;
                             len = 1;
                             set = new HashSet<>();
                             set.add(newChar);
                         } else {
                             set = new HashSet<>();
-                            for (int i1=k; i1 < i + len; i1++) {
+                            for (int i1 = k; i1 < i + len; i1++) {
                                 set.add((int) s.charAt(i1));
                             }
                             len = i + len - k;
@@ -71,7 +73,7 @@ public class Solution3 {
             } else {
                 len++;
                 set.add(newChar);
-                if(len > max) {
+                if (len > max) {
                     max = len;
                 }
             }
@@ -79,18 +81,19 @@ public class Solution3 {
 
         return max;
     }
+
     private static int lengthOfLongestSubstringV1(String s) {
         int max = 0;
         Set<Integer> set;
-        for (;max < s.length(); max++) {
+        for (; max < s.length(); max++) {
             int tMax = max;
-            for (int i=0; i< s.length(); i++) {
+            for (int i = 0; i < s.length(); i++) {
                 set = new HashSet<>();
-                for (int j=i; j < i + max + 1; j++) {
-                    if(j >= s.length()) {
+                for (int j = i; j < i + max + 1; j++) {
+                    if (j >= s.length()) {
                         break;
                     }
-                    int t = (int)s.charAt(j);
+                    int t = (int) s.charAt(j);
                     if (set.contains(t)) {
                         break;
                     }
@@ -101,7 +104,7 @@ public class Solution3 {
                     break;
                 }
             }
-            if(tMax == max) {
+            if (tMax == max) {
                 break;
             }
         }

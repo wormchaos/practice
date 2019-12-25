@@ -1,8 +1,5 @@
 package com.wormchaos.lc.sliding_window;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * Created by wormchaos on 2019-12-18.
  * 字形变换

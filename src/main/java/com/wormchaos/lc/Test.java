@@ -1,6 +1,7 @@
 package com.wormchaos.lc;
 
 import com.wormchaos.lc.sliding_window.*;
+import com.wormchaos.lc.sliding_window.easy.*;
 import com.wormchaos.lc.toolbean.ListNode;
 
 import java.util.*;
@@ -95,7 +96,8 @@ public class Test {
 //        Object result = new Solution27().removeElement(new int[]{0,1,2,2,3,0,4,2}, 2);
 //        Object result = new Solution30().findSubstring("barfoothefoobarman", new String[]{"foo","bar"});
 //        Object result = new Solution30().findSubstring("wordgoodgoodgoodbestword", new String[]{"word","good","best","word"});
-        Object result = new Solution30().findSubstring("wordgoodgoodgoodbestword", new String[]{"word","good","best","good"});
+        // Object result = new Solution30().findSubstring("wordgoodgoodgoodbestword", new String[]{"word","good","best","good"});
+        Object result = new Solution38().countAndSay(5);
         System.out.print(result);
     }
 

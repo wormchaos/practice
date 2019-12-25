@@ -1,4 +1,4 @@
-package com.wormchaos.lc.sliding_window;
+package com.wormchaos.lc.sliding_window.easy;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -12,9 +12,6 @@ import java.util.Map;
 public class Solution66 {
     public int[] plusOne(int[] digits) {
         int[] result = new int[digits.length];
-        if(digits.length == 1 && digits[0] == 9) {
-            return new int[]{1,0};
-        }
         digits[digits.length - 1] += 1;
         for(int i = digits.length - 1; i >=0; i--) {
             if(digits[i] >= 10) {
