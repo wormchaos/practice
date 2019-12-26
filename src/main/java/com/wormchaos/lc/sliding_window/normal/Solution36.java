@@ -9,75 +9,28 @@ import java.util.Set;
  */
 public class Solution36 {
     public boolean isValidSudoku(char[][] board) {
-        Set<Character> set;
-        // 数独思路
-        // 判断每个横竖行不存在重复
-        for (int i = 0; i < board.length; i++) {
-            set = new HashSet<>();
-            for (int j = 0; j < board[0].length; j++) {
-                if (board[i][j] == '.') {
+        int n = board.length;
+        Set<Character>[] row = new HashSet[n];
+        Set<Character>[] column = new HashSet[n];
+        Set<Character>[] box = new HashSet[n];
+        for (int i = 0; i < 9; i++) {
+            row[i] = new HashSet<>();
+            column[i] = new HashSet<>();
+            box[i] = new HashSet<>();
+        }
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                if(board[i][j] == '.') {
                     continue;
                 }
-                if (set.contains(board[i][j])) {
+                // 3 *I+J
+                int box_index = (i / 3 ) * 3 + j / 3;
+                if(row[i].contains(board[i][j]) || column[j].contains(board[i][j]) || box[box_index].contains(board[i][j])){
                     return false;
-                } else {
-                    set.add(board[i][j]);
                 }
-            }
-        }
-        for (int j = 0; j < board[0].length; j++) {
-            set = new HashSet<>();
-            for (int i = 0; i < board.length; i++) {
-                if (board[i][j] == '.') {
-                    continue;
-                }
-                if (set.contains(board[i][j])) {
-                    return false;
-                } else {
-                    set.add(board[i][j]);
-                }
-            }
-        }
-//        // 判断两个斜行不存在重复
-//        set = new HashSet<>();
-//        for (int i = 0; i < board.length; i++) {
-//            if (board[i][i] == '.') {
-//                continue;
-//            }
-//            if (set.contains(board[i][i])) {
-//                return false;
-//            } else {
-//                set.add(board[i][i]);
-//            }
-//        }
-//        set = new HashSet<>();
-//        for (int i = 0; i < board.length; i++) {
-//            if (board[i][8-i] == '.') {
-//                continue;
-//            }
-//            if (set.contains(board[i][8-i])) {
-//                return false;
-//            } else {
-//                set.add(board[i][8-i]);
-//            }
-//        }
-
-        // 判断每个1/9小格子不存在重复
-        for (int k1 = 0; k1 < 9; k1 += 3) {
-            for (int k2 = 0; k2 < 9; k2 += 3) {
-                set = new HashSet<>();
-                for (int i = 0; i < 3; i++) {
-                    for (int j = 0; j < 3; j++) {
-                        if (board[i + k1][j + k2] == '.') {
-                            continue;
-                        }
-                        if (set.contains(board[i + k1][j + k2])) {
-                            return false;
-                        } else {
-                            set.add(board[i + k1][j + k2]);
-                        }
-                    }
-                }
+                row[i].add(board[i][j]);
+                column[j].add(board[i][j]);
+                box[box_index].add(board[i][j]);
             }
         }
         return true;
