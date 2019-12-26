@@ -1,9 +1,5 @@
 package com.wormchaos.lc.sliding_window.easy;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 /**
  * Created by wormchaos on 2019-12-25. 
@@ -63,12 +59,6 @@ public class Solution53 {
         return max;
     }
 
-    private int maxSubArray(int[] nums, int left, int right) {
-        if(left == right) {
-            return nums[left];
-        }
-        int l = maxSubArray(nums, left, right)
-    }
 
     /**
      * 内存容易溢出
