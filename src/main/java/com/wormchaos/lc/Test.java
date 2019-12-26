@@ -2,6 +2,7 @@ package com.wormchaos.lc;
 
 import com.wormchaos.lc.sliding_window.*;
 import com.wormchaos.lc.sliding_window.easy.*;
+import com.wormchaos.lc.sliding_window.normal.Solution34;
 import com.wormchaos.lc.toolbean.ListNode;
 
 import java.util.*;
@@ -100,9 +101,11 @@ public class Test {
         // Object result = new Solution38().countAndSay(5);
 //        Object result = new Solution53().maxSubArray(new int[]{-2,1,-3,4,-1,2,1,-5,4});
 //        Object result = new Solution704().search(new int[]{-1,0,3,5,9,12}, 9);
-        Object result = new Solution704().search(new int[]{5}, 5);
 //        Object result = new Solution704().search(new int[]{}, 9);
-        System.out.print(result);
+//        int[] result = new Solution34().searchRange(new int[]{2,2,2,2,2}, 2);
+//        int[] result = new Solution34().searchRange(new int[]{5,7,7,8,8,10}, 6);
+        int[] result = new Solution34().searchRange(new int[]{5,7,7,8,8,10}, 8);
+        System.out.print(result[0] + "_" + result[1]);
     }
 
     private static void print(ListNode l) {
