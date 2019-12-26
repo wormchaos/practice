@@ -3,6 +3,7 @@ package com.wormchaos.lc;
 import com.wormchaos.lc.sliding_window.*;
 import com.wormchaos.lc.sliding_window.easy.*;
 import com.wormchaos.lc.sliding_window.normal.Solution34;
+import com.wormchaos.lc.sliding_window.normal.Solution36;
 import com.wormchaos.lc.toolbean.ListNode;
 
 import java.util.*;
@@ -104,8 +105,12 @@ public class Test {
 //        Object result = new Solution704().search(new int[]{}, 9);
 //        int[] result = new Solution34().searchRange(new int[]{2,2,2,2,2}, 2);
 //        int[] result = new Solution34().searchRange(new int[]{5,7,7,8,8,10}, 6);
-        int[] result = new Solution34().searchRange(new int[]{5,7,7,8,8,10}, 8);
-        System.out.print(result[0] + "_" + result[1]);
+//        int[] result = new Solution34().searchRange(new int[]{5,7,7,8,8,10}, 8);
+//        System.out.print(result[0] + "_" + result[1]);
+//        char arr[][] = {{'5','3','.','.','7','.','.','.','.'},{'6','.','.','1','9','5','.','.','.'},{'.','9','8','.','.','.','.','6','.'},{'8','.','.','.','6','.','.','.','3'},{'4','.','.','8','.','3','.','.','1'},{'7','.','.','.','2','.','.','.','6'},{'.','6','.','.','.','.','2','8','.'},{'.','.','.','4','1','9','.','.','5'},{'.','.','.','.','8','.','.','7','9'}};
+        char arr[][] = {{'.','.','.','.','.','.','.','.','2'},{'.','.','.','.','.','.','6','.','.'},{'.','.','1','4','.','.','8','.','.'},{'.','.','.','.','.','.','.','.','.'},{'.','.','.','.','.','.','.','.','.'},{'.','.','.','.','3','.','.','.','.'},{'5','.','8','6','.','.','.','.','.'},{'.','9','.','.','.','.','4','.','.'},{'.','.','.','.','5','.','.','.','.'}};
+        boolean result = new Solution36().isValidSudoku(arr);
+        System.out.print(result);
     }
 
     private static void print(ListNode l) {
