@@ -2,6 +2,7 @@ package com.wormchaos.lc;
 
 import com.wormchaos.lc.sliding_window.*;
 import com.wormchaos.lc.sliding_window.easy.*;
+import com.wormchaos.lc.sliding_window.hard.Solution37;
 import com.wormchaos.lc.sliding_window.normal.Solution34;
 import com.wormchaos.lc.sliding_window.normal.Solution36;
 import com.wormchaos.lc.toolbean.ListNode;
@@ -14,6 +15,7 @@ import java.util.*;
 public class Test {
 
     public static void main(String... args) {
+        Object object;
 //        Object result = new Solution76().minWindow("bba", "ab");
 //        Object result = new Solution76().minWindow("aa", "aa");
 //        Object result = new Solution76().minWindow("ADOBECODEBANC", "ABC");
@@ -109,8 +111,18 @@ public class Test {
 //        System.out.print(result[0] + "_" + result[1]);
 //        char arr[][] = {{'5','3','.','.','7','.','.','.','.'},{'6','.','.','1','9','5','.','.','.'},{'.','9','8','.','.','.','.','6','.'},{'8','.','.','.','6','.','.','.','3'},{'4','.','.','8','.','3','.','.','1'},{'7','.','.','.','2','.','.','.','6'},{'.','6','.','.','.','.','2','8','.'},{'.','.','.','4','1','9','.','.','5'},{'.','.','.','.','8','.','.','7','9'}};
         char arr[][] = {{'.','.','.','.','.','.','.','.','2'},{'.','.','.','.','.','.','6','.','.'},{'.','.','1','4','.','.','8','.','.'},{'.','.','.','.','.','.','.','.','.'},{'.','.','.','.','.','.','.','.','.'},{'.','.','.','.','3','.','.','.','.'},{'5','.','8','6','.','.','.','.','.'},{'.','9','.','.','.','.','4','.','.'},{'.','.','.','.','5','.','.','.','.'}};
-        boolean result = new Solution36().isValidSudoku(arr);
-        System.out.print(result);
+//        boolean result = new Solution36().isValidSudoku(arr);
+        new Solution37().solveSudoku(arr);
+        print(arr);
+    }
+
+    private static void print(char[][] arr) {
+        for (int i=0; i<arr.length; i++) {
+            for (int j=0; j <arr[0].length; j++) {
+                System.out.print(arr[i][j]  + " ");
+            }
+            System.out.println();
+        }
     }
 
     private static void print(ListNode l) {
