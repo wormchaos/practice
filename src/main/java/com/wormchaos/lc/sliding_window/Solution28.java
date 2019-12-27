@@ -17,11 +17,52 @@ public class Solution28 {
      * @return
      */
     public int strStr(String haystack, String needle) {
-        // char[][] mod = new char[256][needle.length()];
-        // for(int i=0; i < needle.length();i++) {
-        //     mod[i][needle.charAt(i)] = ;
-        // }
-        return -1;
+        if (needle.length() == 0) {
+            return 0;
+        }
+        char[] c = haystack.toCharArray();
+        char[] nc = needle.toCharArray();
+        int[] pat = getNext(nc);
+
+        int x = 0;
+        int i = 0;
+        while (i < haystack.length() && x < needle.length()) {
+            if(nc[x] == c[i]) {
+                i++;
+                x++;
+            } else {
+                i+= needle.length() - pat[x];
+                x = 0;
+            }
+        }
+
+        return x == needle.length() ?  i -x : -1;
+    }
+
+    private int[] getNext(char[] nc) {
+        // 对字串生成数
+        int[] next = new int[nc.length];
+        int x = 0;
+        next[0] = 0;
+        int i = 1;
+        while(i < nc.length -1) {
+
+            if(nc[i] == nc[x]) {
+                x++;
+                i++;
+                // 此时是next位置，而非当前位置，即 1 ~ i-1最大公共pre/end
+                next[i] = x;
+            } else {
+                if(x == 0) {
+                    next[i] = 0;
+                    i++;
+                } else {
+                    x = next[x];
+                }
+            }
+
+        }
+        return next;
     }
 
     /**
