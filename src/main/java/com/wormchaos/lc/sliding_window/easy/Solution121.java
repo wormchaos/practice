@@ -1,8 +1,6 @@
 package com.wormchaos.lc.sliding_window.easy;
 
 
-import com.wormchaos.lc.toolbean.TreeNode;
-
 /**
  * Created by wormchaos on 2019-12-28.
  * 最大差

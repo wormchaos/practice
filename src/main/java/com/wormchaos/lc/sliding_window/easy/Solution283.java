@@ -8,15 +8,17 @@ package com.wormchaos.lc.sliding_window.easy;
 public class Solution283 {
 
     public void moveZeroes(int[] nums) {
-        int zeroPoint = 0;
+        int zeroCount = 0;
         int i = 0;
         while(i < nums.length) {
-            if(nums[i] == 0) {
-                zeroPoint = i;
-            } else {
-                nums[zeroPoint] = nums[i];
-                zeroPoint = i;
+            if(nums[i] != 0) {
+                nums[zeroCount] = nums[i];
+                zeroCount++;
             }
+            i++;
+        }
+        for(int j =zeroCount ;j<nums.length;j++) {
+            nums[j] = 0;
         }
     }
 
