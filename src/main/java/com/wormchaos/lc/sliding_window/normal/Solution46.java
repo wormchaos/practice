@@ -48,7 +48,11 @@ public class Solution46 {
 
     private void test(int[] nums, int[] used, int level, List<Integer> list, List<List<Integer>> result) {
         if(nums.length == level) {
-            result.add(list);
+            List<Integer> temp = new ArrayList<>();
+            for (Integer i : list) {
+                temp.add(i);
+            }
+            result.add(temp);
             return;
         }
 

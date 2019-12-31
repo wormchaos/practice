@@ -118,7 +118,8 @@ public class Test {
 //        TreeNode treeNode = converFromArray(new Integer[]{2,3,3,4,5,null,4});
 ////        TreeNode treeNode = converFromArray(new Integer[]{1, 2, 2, null, 3, null, 3});
 //        Object result = new Solution101().isSymmetric(treeNode);
-        List<List<Integer>> result = new Solution46().permute(new int[]{1,2,3});
+//        List<List<Integer>> result = new Solution46().permute(new int[]{1,2,3});
+        List<List<Integer>> result = new Solution46().permute(new int[]{});
         print(result);
 //        CalTest.calcRule(50, 4, 1);
 
