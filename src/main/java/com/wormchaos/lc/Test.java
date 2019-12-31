@@ -1,11 +1,13 @@
 package com.wormchaos.lc;
 
+import com.wormchaos.lc.myself.CalTest;
 import com.wormchaos.lc.sliding_window.*;
 import com.wormchaos.lc.sliding_window.easy.*;
 import com.wormchaos.lc.sliding_window.hard.Solution37;
 import com.wormchaos.lc.sliding_window.normal.Solution34;
 import com.wormchaos.lc.sliding_window.normal.Solution36;
 import com.wormchaos.lc.toolbean.ListNode;
+import com.wormchaos.lc.toolbean.TreeNode;
 
 import java.util.*;
 
@@ -58,10 +60,10 @@ public class Test {
 //        print(result);
 //        Object result = new Solution20().isValid("{[]}");
 //        System.out.print(result);
-    //    ListNode l1 = createListNode("3->4->5");
-    //    ListNode l2 = createListNode("4->5");
-    //    ListNode result = new Solution21().mergeTwoLists(l1, l2);
-    //    print(result); 
+        //    ListNode l1 = createListNode("3->4->5");
+        //    ListNode l2 = createListNode("4->5");
+        //    ListNode result = new Solution21().mergeTwoLists(l1, l2);
+        //    print(result);
         // Object result = new Solution22().generateParenthesis(3);
         // System.out.print(result);
         // ListNode l1 = createListNode("1->4->5");
@@ -116,14 +118,79 @@ public class Test {
 
 //        Object result = new Solution28().strStr("acabcadabcababc", "ababc");
 //        Object result = new Solution28().strStr("aaaaa", "bbaa");
-        Object result = new Solution28().strStr("mississippi", "issi");
+//        Object result = new Solution28().strStr("mississippi", "issi");
+//        TreeNode treeNode = converFromArray(new Integer[]{1, 2, 2, 3, 4, 4, 3});
+        TreeNode treeNode = converFromArray(new Integer[]{2,3,3,4,5,null,4});
+//        TreeNode treeNode = converFromArray(new Integer[]{1, 2, 2, null, 3, null, 3});
+        Object result = new Solution101().isSymmetric(treeNode);
         print(result);
+//        CalTest.calcRule(50, 4, 1);
+
+    }
+
+    private static TreeNode converFromArray(Integer[] a) {
+        TreeNode treeNode = new TreeNode(a[0]);
+        int deep = 0;
+        int temp = a.length + 1;
+//        // 计算深度
+//        while (temp == 1) {
+//            temp /= 2;
+//            deep++;
+//        }
+//        int start = 0;
+//        List<TreeNode> list = new ArrayList<>();
+//        list.add(treeNode);
+//        while(start < a.length) {
+//            list = createTree(list, a, start);
+//            start = 2 * start + 1;
+//        }
+//        createTree(list, a, start);
+        return createTree(a, 0);
+
+//         treeNode;
+    }
+
+    private static List<TreeNode> createTree(List<TreeNode> list, Integer[] nums, int start) {
+        if(start == nums.length) {
+            return null;
+        }
+        List<TreeNode> result = new ArrayList<>();
+        int i = 0;
+        for (TreeNode node : list) {
+            int left = 2 * (start + i) + 1;
+            if(null != nums[left]) {
+                node.left = new TreeNode(nums[left]);
+                result.add(node.left);
+            }
+            int right = left + 1;
+
+            if(null != nums[right]) {
+                node.right = new TreeNode(nums[right]);
+                result.add(node.right);
+            }
+            start++;
+        }
+        return result;
+
+    }
+
+    private static TreeNode createTree(Integer[] nums, int k) {
+        if(k >= nums.length || nums[k] == null) {
+            return null;
+        }
+        TreeNode treeNode = new TreeNode(nums[k]);
+        if(treeNode != null) {
+            treeNode.left = createTree(nums, 2 * k + 1);
+            treeNode.right = createTree(nums, 2 * k + 2);
+        }
+        return treeNode;
+
     }
 
     private static void print(char[][] arr) {
-        for (int i=0; i<arr.length; i++) {
-            for (int j=0; j <arr[0].length; j++) {
-                System.out.print(arr[i][j]  + " ");
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[0].length; j++) {
+                System.out.print(arr[i][j] + " ");
             }
             System.out.println();
         }
@@ -144,7 +211,7 @@ public class Test {
     private static ListNode createListNode(String s) {
         // String[] t = s.trim().split("->");
         String[] t;
-        if(s.contains(",")) {
+        if (s.contains(",")) {
             t = s.trim().split(",");
         } else {
             t = s.trim().split("->");
