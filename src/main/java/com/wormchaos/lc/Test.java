@@ -1,11 +1,6 @@
 package com.wormchaos.lc;
 
-import com.wormchaos.lc.myself.CalTest;
-import com.wormchaos.lc.sliding_window.*;
-import com.wormchaos.lc.sliding_window.easy.*;
-import com.wormchaos.lc.sliding_window.hard.Solution37;
-import com.wormchaos.lc.sliding_window.normal.Solution34;
-import com.wormchaos.lc.sliding_window.normal.Solution36;
+import com.wormchaos.lc.sliding_window.normal.Solution46;
 import com.wormchaos.lc.toolbean.ListNode;
 import com.wormchaos.lc.toolbean.TreeNode;
 
@@ -120,9 +115,10 @@ public class Test {
 //        Object result = new Solution28().strStr("aaaaa", "bbaa");
 //        Object result = new Solution28().strStr("mississippi", "issi");
 //        TreeNode treeNode = converFromArray(new Integer[]{1, 2, 2, 3, 4, 4, 3});
-        TreeNode treeNode = converFromArray(new Integer[]{2,3,3,4,5,null,4});
-//        TreeNode treeNode = converFromArray(new Integer[]{1, 2, 2, null, 3, null, 3});
-        Object result = new Solution101().isSymmetric(treeNode);
+//        TreeNode treeNode = converFromArray(new Integer[]{2,3,3,4,5,null,4});
+////        TreeNode treeNode = converFromArray(new Integer[]{1, 2, 2, null, 3, null, 3});
+//        Object result = new Solution101().isSymmetric(treeNode);
+        List<List<Integer>> result = new Solution46().permute(new int[]{1,2,3});
         print(result);
 //        CalTest.calcRule(50, 4, 1);
 
