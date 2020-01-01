@@ -1,5 +1,6 @@
 package com.wormchaos.lc;
 
+import com.wormchaos.lc.sliding_window.normal.Solution39;
 import com.wormchaos.lc.sliding_window.normal.Solution46;
 import com.wormchaos.lc.toolbean.ListNode;
 import com.wormchaos.lc.toolbean.TreeNode;
@@ -119,49 +120,50 @@ public class Test {
 ////        TreeNode treeNode = converFromArray(new Integer[]{1, 2, 2, null, 3, null, 3});
 //        Object result = new Solution101().isSymmetric(treeNode);
 //        List<List<Integer>> result = new Solution46().permute(new int[]{1,2,3});
-        List<List<Integer>> result = new Solution46().permute(new int[]{});
-        print(result);
+        // List<List<Integer>> result = new Solution46().permute(new int[]{});
+        // print(result);
 //        CalTest.calcRule(50, 4, 1);
-
+        Object result = new Solution39().combinationSum(new int[]{2,3,6,7}, 7);
+        print(result);
     }
 
     private static TreeNode converFromArray(Integer[] a) {
         TreeNode treeNode = new TreeNode(a[0]);
         int deep = 0;
         int temp = a.length + 1;
-//        // 计算深度
-//        while (temp == 1) {
-//            temp /= 2;
-//            deep++;
-//        }
-//        int start = 0;
-//        List<TreeNode> list = new ArrayList<>();
-//        list.add(treeNode);
-//        while(start < a.length) {
-//            list = createTree(list, a, start);
-//            start = 2 * start + 1;
-//        }
-//        createTree(list, a, start);
+        // // 计算深度
+        // while (temp == 1) {
+        // temp /= 2;
+        // deep++;
+        // }
+        // int start = 0;
+        // List<TreeNode> list = new ArrayList<>();
+        // list.add(treeNode);
+        // while(start < a.length) {
+        // list = createTree(list, a, start);
+        // start = 2 * start + 1;
+        // }
+        // createTree(list, a, start);
         return createTree(a, 0);
 
-//         treeNode;
+        // treeNode;
     }
 
     private static List<TreeNode> createTree(List<TreeNode> list, Integer[] nums, int start) {
-        if(start == nums.length) {
+        if (start == nums.length) {
             return null;
         }
         List<TreeNode> result = new ArrayList<>();
         int i = 0;
         for (TreeNode node : list) {
             int left = 2 * (start + i) + 1;
-            if(null != nums[left]) {
+            if (null != nums[left]) {
                 node.left = new TreeNode(nums[left]);
                 result.add(node.left);
             }
             int right = left + 1;
 
-            if(null != nums[right]) {
+            if (null != nums[right]) {
                 node.right = new TreeNode(nums[right]);
                 result.add(node.right);
             }
@@ -172,11 +174,11 @@ public class Test {
     }
 
     private static TreeNode createTree(Integer[] nums, int k) {
-        if(k >= nums.length || nums[k] == null) {
+        if (k >= nums.length || nums[k] == null) {
             return null;
         }
         TreeNode treeNode = new TreeNode(nums[k]);
-        if(treeNode != null) {
+        if (treeNode != null) {
             treeNode.left = createTree(nums, 2 * k + 1);
             treeNode.right = createTree(nums, 2 * k + 2);
         }
