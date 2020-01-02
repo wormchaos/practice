@@ -33,9 +33,17 @@ public class Solution40 {
         }
         if (target > 0) {
             for (int i = next; i < candidates.length; i++) {
+                // 剪枝
+                // 因为是升序排列，因此后面的步骤没有必要判断
+                if(candidates[i] > target) {
+                    break;
+                }
+
                 if (!c[i]) {
                     // 检查数是否一致，如果一致且前一个还没用过
-                    if (next > 0 && next < candidates.length && candidates[next] == candidates[next - 1] && !c[i-1]) {
+                    // i > next是因为第一个元素是上一个元素+1肯定不会跳过
+                    // 后续从该层第二个元素判断，如果一致且没有用到则跳过
+                    if (i > next && candidates[i - 1] == candidates[i] && !c[i-1]) {
                         continue;
                     }
                     c[i] = true;

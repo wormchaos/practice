@@ -127,9 +127,9 @@ public class Test {
 //        CalTest.calcRule(50, 4, 1);
 //        Object result = new Solution39().combinationSum(new int[]{2,3,6,7}, 7);
 //        Object result = new Solution40().combinationSum2(new int[]{10,1,2,7,6,1,5}, 8);
-//        Object result = new Solution40().combinationSum2(new int[]{1,1,2,5,6,7,10}, 8);
-//        Object result = new Solution40().combinationSum2(new int[]{1,1,2,3}, 3);
-        Object result = new Solution47().permuteUnique(new int[]{1,1,1,2,2});
+        Object result = new Solution40().combinationSum2(new int[]{1,1,2,5,6,7,10}, 8);
+//        Object result = new Solution40().combinationSum2(new int[]{1, 2, 2, 2, 5}, 5);
+//        Object result = new Solution47().permuteUnique(new int[]{1,1,1,2,2});
         print(result);
     }
 
