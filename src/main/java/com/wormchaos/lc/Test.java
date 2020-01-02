@@ -129,7 +129,9 @@ public class Test {
 //        Object result = new Solution40().combinationSum2(new int[]{1,1,2,5,6,7,10}, 8);
 //        Object result = new Solution40().combinationSum2(new int[]{1, 2, 2, 2, 5}, 5);
 //        Object result = new Solution47().permuteUnique(new int[]{1,1,1,2,2});
-        Object result = new Solution77().combine(4, 2);
+//        Object result = new Solution77().combine(4, 2);
+//        Object result = new Solution78().subsets(new int[]{1,2});
+        Object result = new Solution78().subsets(new int[]{});
         print(result);
     }
 
