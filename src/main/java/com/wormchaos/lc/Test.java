@@ -108,10 +108,11 @@ public class Test {
 //        int[] result = new Solution34().searchRange(new int[]{5,7,7,8,8,10}, 6);
 //        int[] result = new Solution34().searchRange(new int[]{5,7,7,8,8,10}, 8);
 //        System.out.print(result[0] + "_" + result[1]);
-//        char arr[][] = {{'5','3','.','.','7','.','.','.','.'},{'6','.','.','1','9','5','.','.','.'},{'.','9','8','.','.','.','.','6','.'},{'8','.','.','.','6','.','.','.','3'},{'4','.','.','8','.','3','.','.','1'},{'7','.','.','.','2','.','.','.','6'},{'.','6','.','.','.','.','2','8','.'},{'.','.','.','4','1','9','.','.','5'},{'.','.','.','.','8','.','.','7','9'}};
+        char arr[][] = {{'5','3','.','.','7','.','.','.','.'},{'6','.','.','1','9','5','.','.','.'},{'.','9','8','.','.','.','.','6','.'},{'8','.','.','.','6','.','.','.','3'},{'4','.','.','8','.','3','.','.','1'},{'7','.','.','.','2','.','.','.','6'},{'.','6','.','.','.','.','2','8','.'},{'.','.','.','4','1','9','.','.','5'},{'.','.','.','.','8','.','.','7','9'}};
 //        char arr[][] = {{'.','.','.','.','.','.','.','.','2'},{'.','.','.','.','.','.','6','.','.'},{'.','.','1','4','.','.','8','.','.'},{'.','.','.','.','.','.','.','.','.'},{'.','.','.','.','.','.','.','.','.'},{'.','.','.','.','3','.','.','.','.'},{'5','.','8','6','.','.','.','.','.'},{'.','9','.','.','.','.','4','.','.'},{'.','.','.','.','5','.','.','.','.'}};
 ////        boolean result = new Solution36().isValidSudoku(arr);
-//        new Solution37().solveSudoku(arr);
+        new Solution37().solveSudoku(arr);
+        print(arr);
 
 //        Object result = new Solution28().strStr("acabcadabcababc", "ababc");
 //        Object result = new Solution28().strStr("aaaaa", "bbaa");
@@ -131,8 +132,8 @@ public class Test {
 //        Object result = new Solution47().permuteUnique(new int[]{1,1,1,2,2});
 //        Object result = new Solution77().combine(4, 2);
 //        Object result = new Solution78().subsets(new int[]{1,2});
-        Object result = new Solution78().subsets(new int[]{});
-        print(result);
+//        Object result = new Solution78().subsets(new int[]{});
+//        print(result);
     }
 
     private static TreeNode converFromArray(Integer[] a) {
