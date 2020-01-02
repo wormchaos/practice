@@ -1,7 +1,9 @@
 package com.wormchaos.lc;
 
 import com.wormchaos.lc.sliding_window.normal.Solution39;
+import com.wormchaos.lc.sliding_window.normal.Solution40;
 import com.wormchaos.lc.sliding_window.normal.Solution46;
+import com.wormchaos.lc.sliding_window.normal.Solution47;
 import com.wormchaos.lc.toolbean.ListNode;
 import com.wormchaos.lc.toolbean.TreeNode;
 
@@ -123,7 +125,11 @@ public class Test {
         // List<List<Integer>> result = new Solution46().permute(new int[]{});
         // print(result);
 //        CalTest.calcRule(50, 4, 1);
-        Object result = new Solution39().combinationSum(new int[]{2,3,6,7}, 7);
+//        Object result = new Solution39().combinationSum(new int[]{2,3,6,7}, 7);
+//        Object result = new Solution40().combinationSum2(new int[]{10,1,2,7,6,1,5}, 8);
+//        Object result = new Solution40().combinationSum2(new int[]{1,1,2,5,6,7,10}, 8);
+//        Object result = new Solution40().combinationSum2(new int[]{1,1,2,3}, 3);
+        Object result = new Solution47().permuteUnique(new int[]{1,1,1,2,2});
         print(result);
     }
 
