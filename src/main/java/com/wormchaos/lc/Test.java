@@ -112,7 +112,8 @@ public class Test {
 //        char arr[][] = {{'.','.','.','.','.','.','.','.','2'},{'.','.','.','.','.','.','6','.','.'},{'.','.','1','4','.','.','8','.','.'},{'.','.','.','.','.','.','.','.','.'},{'.','.','.','.','.','.','.','.','.'},{'.','.','.','.','3','.','.','.','.'},{'5','.','8','6','.','.','.','.','.'},{'.','9','.','.','.','.','4','.','.'},{'.','.','.','.','5','.','.','.','.'}};
 ////        boolean result = new Solution36().isValidSudoku(arr);
 //        new Solution37().solveSudoku(arr);
-        Object result = new Solution51().solveNQueens(0);
+//        Object result = new Solution51().solveNQueens(0);
+        Object result = new Solution52().totalNQueens(4);
         print(result);
 
 //        Object result = new Solution28().strStr("acabcadabcababc", "ababc");
