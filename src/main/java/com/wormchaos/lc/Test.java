@@ -113,7 +113,8 @@ public class Test {
 ////        boolean result = new Solution36().isValidSudoku(arr);
 //        new Solution37().solveSudoku(arr);
 //        Object result = new Solution51().solveNQueens(0);
-        Object result = new Solution52().totalNQueens(4);
+//        Object result = new Solution52().totalNQueens(4);
+        Object result = new Solution32().longestValidParentheses(")(((((()())()()))()(()))(");
         print(result);
 
 //        Object result = new Solution28().strStr("acabcadabcababc", "ababc");
