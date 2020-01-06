@@ -138,10 +138,11 @@ public class Test {
 //        Object result = new Solution77().combine(4, 2);
 //        Object result = new Solution78().subsets(new int[]{1,2});
 //        Object result = new Solution78().subsets(new int[]{});
-        int arr[][] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
-        new Solution48().rotate(arr);
-        print(arr);
-//        print(result);
+//        int arr[][] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+//        new Solution48().rotate(arr);
+//        print(arr);
+        Object result = new Solution62().uniquePaths(2, 3);
+        print(result);
 
     }
 
