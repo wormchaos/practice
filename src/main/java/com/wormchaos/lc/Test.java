@@ -141,7 +141,9 @@ public class Test {
 //        int arr[][] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
 //        new Solution48().rotate(arr);
 //        print(arr);
-        Object result = new Solution62().uniquePaths(2, 3);
+//        Object result = new Solution62().uniquePaths(2, 3);
+//        Object result = new Solution739().dailyTemperatures(new int[]{73, 74, 75, 71, 69, 72, 76, 73});
+        int[] result = new Solution496().nextGreaterElement(new int[]{4, 1, 2}, new int[]{1, 3, 4, 2});
         print(result);
 
     }
@@ -220,6 +222,12 @@ public class Test {
                 System.out.print(arr[i][j] + " ");
             }
             System.out.println();
+        }
+    }
+
+    private static void print(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
         }
     }
 
