@@ -1,5 +1,6 @@
 package com.wormchaos.lc;
 
+import com.wormchaos.lc.sliding_window.Solution14;
 import com.wormchaos.lc.sliding_window.normal.*;
 import com.wormchaos.lc.sliding_window.easy.*;
 import com.wormchaos.lc.sliding_window.hard.*;
@@ -115,8 +116,8 @@ public class Test {
 //        Object result = new Solution51().solveNQueens(0);
 //        Object result = new Solution52().totalNQueens(4);
 //        Object result = new Solution32().longestValidParentheses(")(((((()())()()))()(()))(");
-        Object result = new Solution118().generate(1);
-        print(result);
+//        Object result = new Solution118().generate(1);
+//        print(result);
 
 //        Object result = new Solution28().strStr("acabcadabcababc", "ababc");
 //        Object result = new Solution28().strStr("aaaaa", "bbaa");
@@ -137,7 +138,11 @@ public class Test {
 //        Object result = new Solution77().combine(4, 2);
 //        Object result = new Solution78().subsets(new int[]{1,2});
 //        Object result = new Solution78().subsets(new int[]{});
+        int arr[][] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+        new Solution48().rotate(arr);
+        print(arr);
 //        print(result);
+
     }
 
     private static TreeNode converFromArray(Integer[] a) {
@@ -200,6 +205,15 @@ public class Test {
     }
 
     private static void print(char[][] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[0].length; j++) {
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    private static void print(int[][] arr) {
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr[0].length; j++) {
                 System.out.print(arr[i][j] + " ");
