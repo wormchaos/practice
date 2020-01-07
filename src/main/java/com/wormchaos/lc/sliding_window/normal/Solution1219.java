@@ -18,7 +18,6 @@ public class Solution1219 {
             return 0;
         }
         int[][] c = new int[grid.length][grid[0].length];
-        boolean[][] f = new boolean[grid.length][grid[0].length];
         for (int i = 0; i < grid.length; i++) {
             for (int j = 0; j < grid[0].length; j++) {
                 if (grid[i][j] > 0) {
