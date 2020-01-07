@@ -5,10 +5,41 @@ import java.util.jar.Pack200;
 
 /**
  * Created by wormchaos on 2020-1-7.
+ * 完全背包
  */
 public class Solution322 {
 
+    /**
+     * 至下而上优化
+     * @param coins
+     * @param amount
+     * @return
+     */
     public int coinChange(int[] coins, int amount) {
+        if(amount == 0) {
+            return 0;
+        }
+        // dp解
+        int[] dp = new int[amount + 1];
+        Arrays.fill(dp, amount + 1);
+        dp[0] = 0;
+        for (int i = 1; i < dp.length; i++) {
+            for (int j = 0; j < coins.length; j++) {
+                if (i >= coins[j]) {
+                    dp[i] = Math.min(dp[i], dp[i - coins[j]] + 1);
+                }
+            }
+        }
+        return dp[amount] > amount ? -1 : dp[amount];
+    }
+
+    /**
+     * 自下而上初版
+     * @param coins
+     * @param amount
+     * @return
+     */
+    public int coinChangeV1(int[] coins, int amount) {
         if(amount == 0) {
             return 0;
         }

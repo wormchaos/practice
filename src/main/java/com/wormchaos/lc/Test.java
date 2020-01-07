@@ -149,7 +149,7 @@ public class Test {
 //        Object result = new Solution1219().getMaximumGold(arr);
 //        Object result = new Solution264().nthUglyNumber(10);
 //        Object result = new Solution322().coinChange(new int[]{186,419,83,408}, 6249);
-        Object result = new Solution322().coinChange(new int[]{1}, 0);
+        Object result = new Solution322().coinChange(new int[]{2,4}, 5);
         print(result);
 
 
