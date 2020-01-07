@@ -147,7 +147,9 @@ public class Test {
 //        int[] result = new Solution503().nextGreaterElements(new int[]{100,1,11,1,120,111,123,1,-1,-100});
 //        int arr[][] = {{1,0,7,0,0,0},{2,0,6,0,1,0},{3,5,6,7,4,2},{4,3,1,0,2,0},{3,0,5,0,20,0}};
 //        Object result = new Solution1219().getMaximumGold(arr);
-        Object result = new Solution264().nthUglyNumber(10);
+//        Object result = new Solution264().nthUglyNumber(10);
+//        Object result = new Solution322().coinChange(new int[]{186,419,83,408}, 6249);
+        Object result = new Solution322().coinChange(new int[]{1}, 0);
         print(result);
 
 
