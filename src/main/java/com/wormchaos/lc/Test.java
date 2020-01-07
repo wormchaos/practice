@@ -144,7 +144,9 @@ public class Test {
 //        Object result = new Solution62().uniquePaths(2, 3);
 //        Object result = new Solution739().dailyTemperatures(new int[]{73, 74, 75, 71, 69, 72, 76, 73});
 //        int[] result = new Solution496().nextGreaterElement(new int[]{4, 1, 2}, new int[]{1, 3, 4, 2});
-        int[] result = new Solution503().nextGreaterElements(new int[]{100,1,11,1,120,111,123,1,-1,-100});
+//        int[] result = new Solution503().nextGreaterElements(new int[]{100,1,11,1,120,111,123,1,-1,-100});
+        int arr[][] = {{1,0,7,0,0,0},{2,0,6,0,1,0},{3,5,6,7,4,2},{4,3,1,0,2,0},{3,0,5,0,20,0}};
+        Object result = new Solution1219().getMaximumGold(arr);
         print(result);
 
     }
