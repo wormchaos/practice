@@ -11,22 +11,50 @@ import java.util.jar.Pack200;
  */
 public class Solution496 {
 
+
+//    /**
+//     * 从后往前
+//     * @see Solution503
+//     * @param nums1
+//     * @param nums2
+//     * @return
+//     */
+//    public int[] nextGreaterElement(int[] nums1, int[] nums2) {
+//        Stack<Integer> stack = new Stack<>();
+//        int[] c = new int[nums2.length];
+//        for (int i = nums2.length - 1; i >= 0; i--) {
+//            while(!stack.isEmpty() && nums2[i] > stack.peek()) {
+//                stack.pop();
+//            }
+//            c[i] = stack.isEmpty() ? -1 : stack.peek();
+//            stack.push(nums2[i]);
+//        }
+//        return c;
+//    }
+
+    /**
+     * 从前往后
+     *
+     * @param nums1
+     * @param nums2
+     * @return
+     */
     public int[] nextGreaterElement(int[] nums1, int[] nums2) {
         // 求连续数组长度
         Map<Integer, Integer> map = new HashMap<>();
         Stack<Integer> stack = new Stack<>();
-        for (int i=0;i< nums2.length; i++) {
+        for (int i = 0; i < nums2.length; i++) {
             // 比他小，直接丢进来，比他大则比较
-            while(!stack.isEmpty() &&  nums2[i] > stack.peek()) {
-                map.put(stack.pop(),nums2[i]);
+            while (!stack.isEmpty() && nums2[i] > stack.peek()) {
+                map.put(stack.pop(), nums2[i]);
             }
             stack.push(nums2[i]);
         }
-        while(!stack.isEmpty()) {
+        while (!stack.isEmpty()) {
             map.put(stack.pop(), -1);
         }
         int[] c = new int[nums1.length];
-        for (int i=0; i < nums1.length;i++) {
+        for (int i = 0; i < nums1.length; i++) {
             c[i] = map.get(nums1[i]);
         }
         return c;
