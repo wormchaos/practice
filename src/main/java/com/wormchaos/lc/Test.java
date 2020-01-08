@@ -150,7 +150,8 @@ public class Test {
 //        Object result = new Solution264().nthUglyNumber(10);
 //        Object result = new Solution322().coinChange(new int[]{186,419,83,408}, 6249);
 //        Object result = new Solution322().coinChange(new int[]{2,4}, 5);
-        Object result = new Solution375().getMoneyAmount(100);
+//        Object result = new Solution375().getMoneyAmount(100);
+        Object result = new Solution169().majorityElement(new int[]{6, 6, 6, 7, 7});
         print(result);
 
 
