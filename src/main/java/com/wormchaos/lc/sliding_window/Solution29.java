@@ -7,8 +7,16 @@ public class Solution29 {
 
     public int divide(int dividend, int divisor) {
         boolean sign = (dividend > 0) ^ (divisor > 0);
-        while (dividend < divisor) {
+        dividend = Math.abs(dividend);
+        divisor = Math.abs(divisor);
+        int i =0;
+        while (dividend >= divisor) {
+            dividend = dividend - divisor;
+            i++;
         }
-        return 0;
+        if(sign) {
+            i = -i;
+        }
+        return i;
     }
 }
