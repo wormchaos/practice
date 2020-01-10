@@ -6,6 +6,38 @@ package com.wormchaos.lc.sliding_window.hard;
  */
 public class Solution10 {
 
+
+    /**
+     * 自下而上的dp
+     *
+     * @param text
+     * @param pattern
+     * @return
+     */
+    public boolean isMatch(String text, String pattern) {
+        boolean[][] dp = new boolean[text.length() + 1][pattern.length() + 1];
+        dp[text.length()][pattern.length()] = true;
+        for (int i = text.length(); i >= 0; i--) {
+            // 从倒数第二个开始
+            for (int j = pattern.length() -1; j >= 0; j--) {
+                boolean first = i < text.length() && !text.substring(i, text.length()).isEmpty() &&
+                        (text.charAt(i) == pattern.charAt(j) || pattern.charAt(j) == '.');
+                if(j + 2 <= pattern.length() && pattern.charAt(j + 1) == '*') {
+                    dp[i][j] = (first && dp[i+1][j]) || dp[i][j+2];
+                } else {
+                    dp[i][j] = first && dp[i+1][j+1];
+                }
+            }
+        }
+
+        return dp[0][0];
+    }
+
+
+    private enum Result {
+        True, False;
+    }
+
     /**
      * dp解
      *
@@ -13,35 +45,39 @@ public class Solution10 {
      * @param pattern
      * @return
      */
-    public boolean isMatch(String text, String pattern) {
+    public boolean isMatchV3(String text, String pattern) {
         // x,y表示text的第x位开始和pattern的第y位开始是否匹配
 //        boolean[][] dp = new boolean[text.length()][pattern.length()];
         // 可能场景
         // if i == j || j =='.' dp[i][j] = dp[i+1][j+1];
         // if j+1 == '*' dp[i][j] = dp[i][j+2] || dp[i+1][j];
 //        return dp[0][0];
-        int[][] memo = new int[text.length() + 1][pattern.length() + 1];
+        Result[][] memo = new Result[text.length() + 1][pattern.length() + 1];
         boolean result = dp(0, 0, text, pattern, memo);
         return result;
     }
 
-    private boolean dp(int i, int j, String text, String pattern, int[][] memo) {
-        if (memo[i][j] != 0) {
-            return memo[i][j] == 1 ? true : false;
-        }
-        if (text.isEmpty() || i > text.length() || j > pattern.length()) {
-            return pattern.isEmpty();
-        }
-        boolean first = !text.isEmpty() && (text.charAt(i) == pattern.charAt(j) || pattern.charAt(j) == '.');
+    private boolean dp(int i, int j, String text, String pattern, Result[][] memo) {
         boolean result;
-        if (text.length() > 1 && text.charAt(i + 1) == '*') {
-            result = (first && memo[i + 1][j] == 1) || (memo[i][j + 2] == 1);
-        } else {
-            result = first && memo[i + 1][j + 1] == 1;
+        if (memo[i][j] != null) {
+            return memo[i][j] == Result.True;
         }
-        memo[i][j] = result ? 1 : -1;
+        if (pattern.substring(j, pattern.length()).length() == 0) {
+            result = text.substring(i, text.length()).length() == 0;
+            memo[i][j] = result ? Result.True : Result.False;
+            return result;
+        }
+        boolean first = !text.substring(i, text.length()).isEmpty() && (text.charAt(i) == pattern.charAt(j)
+                || pattern.charAt(j) == '.');
+        if (pattern.substring(j, pattern.length()).length() > 1 && pattern.charAt(j + 1) == '*') {
+            boolean f1 = dp(i, j + 2, text, pattern, memo);
+            boolean f2 = first && dp(i + 1, j, text, pattern, memo);
+            result = f1 || f2;
+        } else {
+            result = first && dp(i + 1, j + 1, text, pattern, memo);
+        }
+        memo[i][j] = result ? Result.True : Result.False;
         return result;
-
     }
 
 
