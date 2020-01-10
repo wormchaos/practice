@@ -150,7 +150,8 @@ public class Test {
 //        Object result = new Solution322().coinChange(new int[]{2,4}, 5);
 //        Object result = new Solution375().getMoneyAmount(100);
 //        Object result = new Solution169().majorityElement(new int[]{6, 6, 6, 7, 7});
-        Object result = new Solution10().isMatch("aa", "a*");
+//        Object result = new Solution10().isMatch("aa", "a*");
+        Object result =  new Solution41().firstMissingPositive(new int[]{3,4,-1,1});
         print(result);
 
     }
