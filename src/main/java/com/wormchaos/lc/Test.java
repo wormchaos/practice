@@ -153,8 +153,10 @@ public class Test {
 //        Object result = new Solution169().majorityElement(new int[]{6, 6, 6, 7, 7});
 //        Object result = new Solution10().isMatch("aa", "a*");
 //        Object result =  new Solution41().firstMissingPositive(new int[]{3,4,-1,1});
-        int arr[][] = {{1,0,7,0,0,0},{2,0,6,0,1,0},{3,5,6,7,4,2},{4,3,1,0,2,0},{3,0,5,0,20,0}};
-        List<Integer> result = new Solution54().spiralOrder(arr);
+//        int arr[][] = {{1,0,7,0,0,0},{2,0,6,0,1,0},{3,5,6,7,4,2},{4,3,1,0,2,0},{3,0,5,0,20,0}};
+//        List<Integer> result = new Solution54().spiralOrder(arr);
+//        int result = new Solution42().trap(new int[]{0,1,0,2,1,0,1,3,2,1,2,1});
+        int result = new Solution42().trap(new int[]{5,2,1,2,1,5});
         print(result);
 
     }
