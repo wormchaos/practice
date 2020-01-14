@@ -157,7 +157,7 @@ public class Test {
 //        List<Integer> result = new Solution54().spiralOrder(arr);
 //        int result = new Solution42().trap(new int[]{0,1,0,2,1,0,1,3,2,1,2,1});
 //        int result = new Solution42().trap(new int[]{5,2,1,2,1,5});
-        Object result = new Solution44().isMatch("aa", "a");
+        Object result = new Solution44().isMatch("aaa", "*b");
         print(result);
 
     }
