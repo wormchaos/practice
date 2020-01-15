@@ -162,7 +162,6 @@ public class Test {
 //        int[][] result = new Solution56().merge(new int[][]{{1,1}});
         Object result = new Solution91().numDecodings("226");
         print(result);
-
     }
 
     private static TreeNode converFromArray(Integer[] a) {
@@ -191,7 +190,7 @@ public class Test {
         if (start == nums.length) {
             return null;
         }
-        List<TreeNode> result = new ArrayList<>();
+        List<TreeNode> result = new ArrayList();
         int i = 0;
         for (TreeNode node : list) {
             int left = 2 * (start + i) + 1;
