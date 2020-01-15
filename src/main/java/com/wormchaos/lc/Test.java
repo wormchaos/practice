@@ -160,7 +160,7 @@ public class Test {
 //        Object result = new Solution44().isMatch("aaa", "*b");
 //        int[][] result = new Solution56().merge(new int[][]{{15, 15},{1,3},{2,6},{8,10},{15,18}});
 //        int[][] result = new Solution56().merge(new int[][]{{1,1}});
-        Object result = new Solution91().numDecodings("226");
+        Object result = new Solution91().numDecodings("2022");
         print(result);
     }
 
