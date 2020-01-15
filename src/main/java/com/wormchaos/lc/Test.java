@@ -165,8 +165,10 @@ public class Test {
 //        Object result = new Solution68().fullJustify(new String[]{"ask","not","what","your","country","can","do","for","you","ask","what","you","can","do","for","your","country"}, 16);
 //        Object result = new Solution68().fullJustify(new String[]{"This", "is", "an", "example", "of", "text", "justification."}, 16);
 //        Object result = new Solution68().fullJustify(new String[]{"This", "is", "an", "test", "of", "text"}, 6);
-        Object result = new Solution68().fullJustify(new String[]{"a"}, 1);
+//        Object result = new Solution68().fullJustify(new String[]{"a"}, 1);
 //        Object result = new Solution68().fullJustify(new String[]{""}, 0);
+//        Object result = new Solution131().partition("abaa");
+        Object result = new Solution132().minCut("aabaa");
         print(result);
     }
 
