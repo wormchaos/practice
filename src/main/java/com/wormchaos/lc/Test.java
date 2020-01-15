@@ -1,9 +1,7 @@
 package com.wormchaos.lc;
 
-import com.wormchaos.lc.sliding_window.Solution14;
 import com.wormchaos.lc.sliding_window.hard.*;
-import com.wormchaos.lc.sliding_window.normal.Solution54;
-import com.wormchaos.lc.sliding_window.normal.Solution56;
+import com.wormchaos.lc.sliding_window.normal.*;
 import com.wormchaos.lc.toolbean.ListNode;
 import com.wormchaos.lc.toolbean.TreeNode;
 
@@ -161,7 +159,8 @@ public class Test {
 //        int result = new Solution42().trap(new int[]{5,2,1,2,1,5});
 //        Object result = new Solution44().isMatch("aaa", "*b");
 //        int[][] result = new Solution56().merge(new int[][]{{15, 15},{1,3},{2,6},{8,10},{15,18}});
-        int[][] result = new Solution56().merge(new int[][]{{1,1}});
+//        int[][] result = new Solution56().merge(new int[][]{{1,1}});
+        Object result = new Solution91().numDecodings("226");
         print(result);
 
     }
