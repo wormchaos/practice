@@ -167,8 +167,8 @@ public class Test {
 //        Object result = new Solution68().fullJustify(new String[]{"This", "is", "an", "test", "of", "text"}, 6);
 //        Object result = new Solution68().fullJustify(new String[]{"a"}, 1);
 //        Object result = new Solution68().fullJustify(new String[]{""}, 0);
-//        Object result = new Solution131().partition("abaa");
-        Object result = new Solution132().minCut("aabaa");
+        Object result = new Solution131().partition("a");
+//        Object result = new Solution132().minCut("aabaa");
         print(result);
     }
 
