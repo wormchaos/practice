@@ -10,6 +10,11 @@ public class Solution131 {
 
     private List<List<String>> result = new ArrayList<>();
 
+    /**
+     * 回溯+memo数组
+     * @param s
+     * @return
+     */
     public List<List<String>> partition(String s) {
         String[][] dp = new String[s.length()][s.length()];
         List<String> list = new ArrayList<>();
