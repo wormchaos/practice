@@ -184,7 +184,8 @@ public class Test {
 //        Object result = new Solution32().longestValidParentheses("()(((()))");
 //        Object result = new Solution32().longestValidParentheses(")())()(())");
 //        Object result = new Solution32().longestValidParentheses("()(()(()");
-        Object result = new Solution32().longestValidParentheses(")()()()");
+//        Object result = new Solution32().longestValidParentheses(")()()()");
+        Object result = new Solution43().multiply("5", "12");
         System.out.println("time :" + (System.currentTimeMillis() - a));
         print(result);
     }
