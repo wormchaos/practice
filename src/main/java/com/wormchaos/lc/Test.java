@@ -177,7 +177,10 @@ public class Test {
 //        Object result = new Solution5().longestPalindrome("");
 //        Object result = new Solution71().simplifyPath("/...");
 //        Object result = new Solution79().exist(new char[][]{{'A', 'B', 'C', 'E'}, {'S', 'F', 'C', 'S'}, {'A', 'D', 'E', 'E'}}, "ABCCED");
-        Object result = new Solution79().exist(new char[][]{{'A'},{'A'}}, "AAA");
+//        Object result = new Solution79().exist(new char[][]{{'A'},{'A'}}, "AAA");
+//        int[] arr = new int[]{1,1,1,1,2,3,3,3,4,5,5,8,10,10,11};
+        int[] arr = new int[]{1};
+        Object result = new Solution80().removeDuplicates(arr);
         System.out.println("time :" + (System.currentTimeMillis() - a));
         print(result);
     }
