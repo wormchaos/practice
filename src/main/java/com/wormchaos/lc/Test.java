@@ -188,7 +188,8 @@ public class Test {
 //        Object result = new Solution43().multiply("5", "12");
 //        Object result = new Solution45().jump(new int[]{2,3,1,1,4});
 //        Object result = new Solution45().jump(new int[]{2});
-        Object result = new Solution49().groupAnagrams(new String[]{"eat", "tea", "tan", "ate", "nat", "bat"});
+//        Object result = new Solution49().groupAnagrams(new String[]{"eat", "tea", "tan", "ate", "nat", "bat"});
+        Object result = new Solution50().myPow(1.10000, -2147483648);
         System.out.println("time :" + (System.currentTimeMillis() - a));
         print(result);
     }
