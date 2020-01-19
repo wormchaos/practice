@@ -202,7 +202,8 @@ public class RunMethod {
         System.out.println("time :" + (System.currentTimeMillis() - a));
 //        int[][] result = new Solution59().generateMatrix(5);
 //        Object result = new Solution60().getPermutation(5, 118);
-        ListNode l = createListNode("1->2->3->4->5");
+//        ListNode l = createListNode("1->2->3->4->5");
+        ListNode l = createListNode("1->2");
         ListNode result = new Solution61().rotateRight(l, 2);
         print(result);
     }

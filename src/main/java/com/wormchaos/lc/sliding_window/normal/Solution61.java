@@ -7,7 +7,7 @@ import com.wormchaos.lc.toolbean.ListNode;
  */
 public class Solution61 {
     public ListNode rotateRight(ListNode head, int k) {
-        if(head == null || head.next == null || k == 0) {
+        if(head == null || head.next == null) {
             return head;
         }
         int len = 0;
@@ -18,6 +18,9 @@ public class Solution61 {
             head = head.next;
         }
         k %= len;
+        if(k == 0) {
+            return pre.next;
+        }
         head = pre.next;
         while (k < len - 1) {
             head = head.next;
