@@ -193,7 +193,8 @@ public class Test {
 //        int[] arr = new int[]{1,2,3};
 //        int[] arr = new int[]{1};
 //        new Solution31().nextPermutation(arr);
-        boolean result = new Solution416().canPartition(new int[]{1, 5, 11, 5});
+//        boolean result = new Solution416().canPartition(new int[]{1, 5, 11, 5});
+        boolean result = new Solution416().canPartition(new int[]{2, 2, 3, 5});
         System.out.println("time :" + (System.currentTimeMillis() - a));
         print(result);
     }

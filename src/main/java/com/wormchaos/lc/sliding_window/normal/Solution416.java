@@ -16,6 +16,39 @@ public class Solution416 {
         }
         // 找到数组值 等于总和一半即可
         sum /= 2;
+        // 是否能找到和为i的
+        boolean[] dp = new boolean[sum + 1];
+        dp[0] = true;
+        dp[nums[0]] = nums[0] <= sum;
+        for (int i = 1; i < nums.length; i++) {
+            // 从前往后会出现覆盖，比如 2,5,1 第一次遍历之后dp[2] = dp[4] = true
+            for (int j = sum; j >= nums[i]; j--) {
+                if(dp[sum]) {
+                    return true;
+                }
+                dp[j] = dp[j] || dp[j - nums[i]];
+            }
+        }
+        return dp[sum];
+    }
+
+    /**
+     * 双数组dp
+     *
+     * @param nums
+     * @return
+     */
+    public boolean canPartition_DP(int[] nums) {
+        // 获取预期值
+        int sum = 0;
+        for (int i = 0; i < nums.length; i++) {
+            sum += nums[i];
+        }
+        if (nums.length <= 1 || sum % 2 == 1) {
+            return false;
+        }
+        // 找到数组值 等于总和一半即可
+        sum /= 2;
         // define a,b - [0, a] value == sum
         boolean[][] dp = new boolean[nums.length][sum + 1];
         dp[0][0] = false;
@@ -27,12 +60,11 @@ public class Solution416 {
                     dp[i][j] = dp[i - 1][j] || (j > nums[i] && dp[i - 1][j - nums[i]]);
                 }
             }
-            if(dp[i][sum]) {
+            if (dp[i][sum]) {
                 return true;
             }
         }
         return dp[nums.length - 1][sum];
-
     }
 
     boolean hasResult = false;
