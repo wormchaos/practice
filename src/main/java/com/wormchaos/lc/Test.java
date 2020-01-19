@@ -191,10 +191,11 @@ public class Test {
 //        Object result = new Solution49().groupAnagrams(new String[]{"eat", "tea", "tan", "ate", "nat", "bat"});
 //        Object result = new Solution50().myPow(1.10000, -2147483648);
 //        int[] arr = new int[]{1,2,3};
-        int[] arr = new int[]{1};
-        new Solution31().nextPermutation(arr);
+//        int[] arr = new int[]{1};
+//        new Solution31().nextPermutation(arr);
+        boolean result = new Solution416().canPartition(new int[]{1, 5, 11, 5});
         System.out.println("time :" + (System.currentTimeMillis() - a));
-        print(arr);
+        print(result);
     }
 
     private static TreeNode converFromArray(Integer[] a) {
