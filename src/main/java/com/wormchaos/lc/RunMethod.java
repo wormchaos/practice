@@ -13,7 +13,7 @@ import java.util.concurrent.SynchronousQueue;
 /**
  * Created by wormchaos on 2019-12-16.
  */
-public class Test {
+public class RunMethod {
 
     public static void main(String... args) {
         Object object;
@@ -200,7 +200,8 @@ public class Test {
 //        new Solution88().merge(arr1, 0, new int[]{2, 5, 6}, 3);
 //        Object result = new Solution33().search(new int[]{4,5,6,7,0,1,2}, 0);
         System.out.println("time :" + (System.currentTimeMillis() - a));
-        int[][] result = new Solution59().generateMatrix(5);
+//        int[][] result = new Solution59().generateMatrix(5);
+        Object result = new Solution60().getPermutation(5, 118);
         print(result);
     }
 
