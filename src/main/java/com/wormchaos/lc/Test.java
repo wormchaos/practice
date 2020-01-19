@@ -196,10 +196,11 @@ public class Test {
 //        new Solution31().nextPermutation(arr);
 //        boolean result = new Solution416().canPartition(new int[]{1, 5, 11, 5});
 //        boolean result = new Solution416().canPartition(new int[]{2, 2, 3, 5});
-        int[] arr1 = new int[]{1, 2, 3, 0, 0, 0};
-        new Solution88().merge(arr1, 0, new int[]{2, 5, 6}, 3);
+//        int[] arr1 = new int[]{1, 2, 3, 0, 0, 0};
+//        new Solution88().merge(arr1, 0, new int[]{2, 5, 6}, 3);
+        Object result = new Solution33().search(new int[]{4,5,6,7,0,1,2}, 0);
         System.out.println("time :" + (System.currentTimeMillis() - a));
-//        print(result);
+        print(result);
     }
 
     private static TreeNode converFromArray(Integer[] a) {
