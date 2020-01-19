@@ -198,8 +198,9 @@ public class Test {
 //        boolean result = new Solution416().canPartition(new int[]{2, 2, 3, 5});
 //        int[] arr1 = new int[]{1, 2, 3, 0, 0, 0};
 //        new Solution88().merge(arr1, 0, new int[]{2, 5, 6}, 3);
-        Object result = new Solution33().search(new int[]{4,5,6,7,0,1,2}, 0);
+//        Object result = new Solution33().search(new int[]{4,5,6,7,0,1,2}, 0);
         System.out.println("time :" + (System.currentTimeMillis() - a));
+        int[][] result = new Solution59().generateMatrix(5);
         print(result);
     }
 
