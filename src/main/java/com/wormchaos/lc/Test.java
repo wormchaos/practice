@@ -1,6 +1,7 @@
 package com.wormchaos.lc;
 
 import com.wormchaos.lc.sliding_window.Solution5;
+import com.wormchaos.lc.sliding_window.easy.Solution88;
 import com.wormchaos.lc.sliding_window.hard.*;
 import com.wormchaos.lc.sliding_window.normal.*;
 import com.wormchaos.lc.toolbean.ListNode;
@@ -194,9 +195,11 @@ public class Test {
 //        int[] arr = new int[]{1};
 //        new Solution31().nextPermutation(arr);
 //        boolean result = new Solution416().canPartition(new int[]{1, 5, 11, 5});
-        boolean result = new Solution416().canPartition(new int[]{2, 2, 3, 5});
+//        boolean result = new Solution416().canPartition(new int[]{2, 2, 3, 5});
+        int[] arr1 = new int[]{1, 2, 3, 0, 0, 0};
+        new Solution88().merge(arr1, 0, new int[]{2, 5, 6}, 3);
         System.out.println("time :" + (System.currentTimeMillis() - a));
-        print(result);
+//        print(result);
     }
 
     private static TreeNode converFromArray(Integer[] a) {
