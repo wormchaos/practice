@@ -1,6 +1,7 @@
 package com.wormchaos.lc;
 
 import com.wormchaos.lc.sliding_window.Solution5;
+import com.wormchaos.lc.sliding_window.easy.Solution83;
 import com.wormchaos.lc.sliding_window.easy.Solution88;
 import com.wormchaos.lc.sliding_window.hard.*;
 import com.wormchaos.lc.sliding_window.normal.*;
@@ -203,8 +204,9 @@ public class RunMethod {
 //        int[][] result = new Solution59().generateMatrix(5);
 //        Object result = new Solution60().getPermutation(5, 118);
 //        ListNode l = createListNode("1->2->3->4->5");
-        ListNode l = createListNode("1->2");
-        ListNode result = new Solution61().rotateRight(l, 2);
+//        ListNode l = createListNode("1->2");
+//        ListNode result = new Solution61().rotateRight(l, 2);
+        ListNode result = new Solution83().deleteDuplicates( createListNode("1->1->1"));
         print(result);
     }
 
