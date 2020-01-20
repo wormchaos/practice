@@ -208,8 +208,10 @@ public class RunMethod {
 //        ListNode result = new Solution61().rotateRight(l, 2);
 //        ListNode result = new Solution83().deleteDuplicates( createListNode("1->1->1"));
 //        ListNode result = new Solution82().deleteDuplicates( createListNode("1->1->1->2->3->3"));
-        ListNode result = new Solution82().deleteDuplicates( createListNode("1->1->1"));
+//        ListNode result = new Solution82().deleteDuplicates( createListNode("1->1->1"));
 //        ListNode result = new Solution82().deleteDuplicates( createListNode("1->2->3->3->4->4->5"));
+//        Object result = new Solution84().largestRectangleArea(new int[]{2,1,5,6,2,3});
+        Object result = new Solution84().largestRectangleArea(new int[]{});
         print(result);
     }
 
