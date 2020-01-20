@@ -206,7 +206,10 @@ public class RunMethod {
 //        ListNode l = createListNode("1->2->3->4->5");
 //        ListNode l = createListNode("1->2");
 //        ListNode result = new Solution61().rotateRight(l, 2);
-        ListNode result = new Solution83().deleteDuplicates( createListNode("1->1->1"));
+//        ListNode result = new Solution83().deleteDuplicates( createListNode("1->1->1"));
+//        ListNode result = new Solution82().deleteDuplicates( createListNode("1->1->1->2->3->3"));
+        ListNode result = new Solution82().deleteDuplicates( createListNode("1->1->1"));
+//        ListNode result = new Solution82().deleteDuplicates( createListNode("1->2->3->3->4->4->5"));
         print(result);
     }
 
