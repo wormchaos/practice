@@ -5,34 +5,60 @@ package com.wormchaos.lc.myself;
  */
 public class SortTest {
     public static void main(String... args) {
-        int[] arr = new int[]{1,3,1,23,10,6,7,8,7,4,3};
-        insertSort(arr);
+        int[] arr = new int[]{3, 1, 1, 23, 10, 6, 7, 8, 7, 4, 3};
+        int c = insertSort(arr);
+//        int c = shellSort(arr);
         print(arr);
+        System.out.print("\n时间" + c + "/" + arr.length);
     }
 
     private static void print(int[] arr) {
-        for (int i =0;i<arr.length;i++) {
+        for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] + " ");
         }
     }
 
-    public static void insertSort(int[] arr) {
-        for (int i = 0; i < arr.length - 1; i++) {
-            int min = arr[i+1];
-            int k = i+1;
-            for (int j = i + 1; j < arr.length; j++) {
-                if(arr[j] < min) {
-                    min = arr[j];
-                    k = j;
+    /**
+     * TODO 以后再写一次
+     *
+     * @param a
+     * @return
+     */
+    public static int shellSort(int[] a) {
+        int calCount = 0;
+        // 分隔
+        int j;
+        for (int gap = a.length / 2; gap > 0; gap /= 2) {
+            for (int i = gap; i < a.length; i++) {
+                int tmp = a[i];
+                for (j = i; j >= gap && tmp < a[j - gap]; j -= gap) {
+                    calCount++;
+                    a[j] = a[j - gap];
                 }
+                a[j] = tmp;
             }
-            swtich(arr, i+1, k);
         }
-
+        return calCount;
     }
 
-    private static void swtich(int[] arr, int num1, int num2) {
-        int t= arr[num1];
+    // 插排 单个数字插入有序的数组
+    public static int insertSort(int[] a) {
+        int calCount = 0;
+        // 0- n-2 的有序数组
+        for (int i = 0; i < a.length - 1; i++) {
+            for (int j = 0; j <= i; j++) {
+                calCount++;
+                if (a[j] > a[i + 1]) {
+                    swap(a, i + 1, j);
+                }
+            }
+
+        }
+        return calCount;
+    }
+
+    private static void swap(int[] arr, int num1, int num2) {
+        int t = arr[num1];
         arr[num1] = arr[num2];
         arr[num2] = t;
     }
