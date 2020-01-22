@@ -218,7 +218,8 @@ public class RunMethod {
 //        Object result =  new Solution137().singleNumber(new int[]{});
 //        char[][] arr = new char[][]{{'1','1','1','1','0'},{'1','1','0','1','0'},{'1','1','0','0','0'},{'0','0','0','0','0'}};
 //        Object result = new Solution200().numIslands(arr);
-        Object result = new Solution215().findKthLargest(new int[]{}, 0);
+//        Object result = new Solution215().findKthLargest(new int[]{}, 0);
+        Object result = new Solution216().combinationSum3(3, 7);
         print(result);
     }
 
