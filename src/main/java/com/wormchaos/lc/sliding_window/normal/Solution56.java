@@ -27,7 +27,8 @@ public class Solution56 {
 //            intervals[k][1] = intervals[i][1];
 //            intervals[i][1] = temp2;
 //        }
-        Arrays.sort(intervals, (a, b) -> a[0] - b[0]);
+        // 排序
+//        Arrays.sort(intervals, (a, b) -> a[0] - b[0]);
         boolean[] isLose = new boolean[intervals.length];
         int count = intervals.length;
         for (int i = 0; i < intervals.length - 1; i++) {
