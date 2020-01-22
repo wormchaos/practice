@@ -6,6 +6,7 @@ import com.wormchaos.lc.sliding_window.easy.Solution83;
 import com.wormchaos.lc.sliding_window.easy.Solution88;
 import com.wormchaos.lc.sliding_window.hard.*;
 import com.wormchaos.lc.sliding_window.normal.*;
+import com.wormchaos.lc.sliding_window.easy.*;
 import com.wormchaos.lc.toolbean.ListNode;
 import com.wormchaos.lc.toolbean.TreeNode;
 
@@ -219,7 +220,8 @@ public class RunMethod {
 //        char[][] arr = new char[][]{{'1','1','1','1','0'},{'1','1','0','1','0'},{'1','1','0','0','0'},{'0','0','0','0','0'}};
 //        Object result = new Solution200().numIslands(arr);
 //        Object result = new Solution215().findKthLargest(new int[]{}, 0);
-        Object result = new Solution216().combinationSum3(3, 7);
+//        Object result = new Solution216().combinationSum3(3, 7);
+        Object result = new Solution219().containsNearbyDuplicate(new int[]{1,1,1,1}, 1);
         print(result);
     }
 
