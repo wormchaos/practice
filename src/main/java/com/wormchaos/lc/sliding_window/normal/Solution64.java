@@ -6,7 +6,41 @@ import java.util.Arrays;
  * Created by wormchaos on 2020-3-3.
  */
 public class Solution64 {
+
+    /**
+     * 一维数组
+     *
+     * @param grid
+     * @return
+     */
     public int minPathSum(int[][] grid) {
+        if (grid.length == 0 || grid[0].length == 0) {
+            return 0;
+        }
+        int[] dp = new int[grid[0].length];
+        for (int i = 0; i < grid.length; i++) {
+            for (int j = 0; j < grid[0].length; j++) {
+                if(i == 0) {
+                    dp[j] = (j == 0 ? 0 : dp[j - 1]) + grid[i][j];
+                } else {
+                    dp[j] = (j == 0 ? dp[j] : Math.min(dp[j-1], dp[j])) + grid[i][j];
+                }
+            }
+//            for (int k=0; k < dp.length; k++) {
+//                System.out.print(dp[k] + " ");
+//            }
+//            System.out.println();
+        }
+        return dp[grid[0].length - 1];
+    }
+
+    /**
+     * 二维数组
+     *
+     * @param grid
+     * @return
+     */
+    public int minPathSum_DP2(int[][] grid) {
         if (grid.length == 0 || grid[0].length == 0) {
             return 0;
         }
