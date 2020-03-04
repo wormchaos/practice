@@ -1,5 +1,6 @@
 package com.wormchaos.lc;
 
+import com.wormchaos.lc.sars.Solution994;
 import com.wormchaos.lc.sliding_window.Solution5;
 import com.wormchaos.lc.sliding_window.easy.Solution137;
 import com.wormchaos.lc.sliding_window.easy.Solution83;
@@ -221,7 +222,13 @@ public class RunMethod {
 //        Object result = new Solution200().numIslands(arr);
 //        Object result = new Solution215().findKthLargest(new int[]{}, 0);
 //        Object result = new Solution216().combinationSum3(3, 7);
-        Object result = new Solution219().containsNearbyDuplicate(new int[]{1,1,1,1}, 1);
+//        Object result = new Solution219().containsNearbyDuplicate(new int[]{1,1,1,1}, 1);
+//        Object result = new Solution125().isPalindrome("A man, a plan, a canal: Panama");
+//        int arr[][] = {{2,1,1},{1,1,0},{0,1,1}};
+        int arr[][] = {{2,2,2,1,1}};
+//        int arr[][] = {{1},{2},{1},{2}};
+//        [[2,1,1],[0,1,1],[1,0,1]]
+        Object result = new Solution994().orangesRotting(arr);
         print(result);
     }
 
