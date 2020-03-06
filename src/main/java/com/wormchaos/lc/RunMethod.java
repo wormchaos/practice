@@ -230,7 +230,9 @@ public class RunMethod {
 //        int arr[][] = {{1},{2},{1},{2}};
 //        [[2,1,1],[0,1,1],[1,0,1]]
 //        Object result = new Solution994().orangesRotting(arr);
-        int[][] result = new Solution57_II().findContinuousSequence(15);
+//        int[][] result = new Solution57_II().findContinuousSequence(15);
+//        Object result =new Solution67().addBinary("1", "11");
+        Object result = new com.wormchaos.lc.sliding_window.normal.Solution137().singleNumber(new int[]{99,99,99,1});
         print(result);
     }
 
