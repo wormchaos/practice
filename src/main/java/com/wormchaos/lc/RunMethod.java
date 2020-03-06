@@ -1,5 +1,6 @@
 package com.wormchaos.lc;
 
+import com.wormchaos.lc.sars.Solution57_II;
 import com.wormchaos.lc.sars.Solution994;
 import com.wormchaos.lc.sliding_window.Solution5;
 import com.wormchaos.lc.sliding_window.easy.Solution137;
@@ -228,7 +229,8 @@ public class RunMethod {
         int arr[][] = {{2,2,2,1,1}};
 //        int arr[][] = {{1},{2},{1},{2}};
 //        [[2,1,1],[0,1,1],[1,0,1]]
-        Object result = new Solution994().orangesRotting(arr);
+//        Object result = new Solution994().orangesRotting(arr);
+        int[][] result = new Solution57_II().findContinuousSequence(15);
         print(result);
     }
 
@@ -302,7 +304,7 @@ public class RunMethod {
 
     private static void print(int[][] arr) {
         for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < arr[0].length; j++) {
+            for (int j = 0; j < arr[i].length; j++) {
                 System.out.print(arr[i][j] + " ");
             }
             System.out.println();
