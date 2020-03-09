@@ -7,21 +7,19 @@ import java.util.Stack;
  */
 public class Solution32 {
     public int longestValidParentheses(String s) {
-        // 判断是否合法
-        Integer max = 0;
-        char[] c = s.toCharArray();
+        // 0.. a最大长度
         Stack<Integer> stack = new Stack<>();
-        for (int i = 0; i < c.length; i++) {
-            if (c[i] == '(') {
+        int max = 0;
+        stack.push(-1);
+        for (int i = 0; i < s.length(); i++) {
+            if (s.charAt(i) == '(') {
                 stack.push(i);
-            } else if (c[i] == ')') {
-                if (stack.isEmpty()) {
-                    continue;
+            } else {
+                stack.pop();
+                if (!stack.isEmpty()) {
+                    max = Math.max(i - stack.peek(), max);
                 } else {
-                    int len = i - stack.pop() + 1;
-                    if(len > max) {
-                        max = len;
-                    }
+                    stack.push(i);
                 }
             }
         }
