@@ -232,7 +232,8 @@ public class RunMethod {
 //        Object result = new Solution994().orangesRotting(arr);
 //        int[][] result = new Solution57_II().findContinuousSequence(15);
 //        Object result =new Solution67().addBinary("1", "11");
-        Object result = new com.wormchaos.lc.sliding_window.normal.Solution137().singleNumber(new int[]{99,99,99,1});
+//        Object result = new com.wormchaos.lc.sliding_window.normal.Solution137().singleNumber(new int[]{99,99,99,1});
+        Object result = new Solution33().search(new int[]{1}, 0);
         print(result);
     }
 
