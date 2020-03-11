@@ -234,8 +234,10 @@ public class RunMethod {
 //        int[][] result = new Solution57_II().findContinuousSequence(15);
 //        Object result =new Solution67().addBinary("1", "11");
 //        Object result = new com.wormchaos.lc.sliding_window.normal.Solution137().singleNumber(new int[]{99,99,99,1});
-//        Object result = new Solution33().search(new int[]{1}, 0);
-        Object result = new Solution1013().canThreePartsEqualSum(new int[]{10,-10,10,-10,10,-10,10,-10});
+//        Object result = new Solution33().search(new int[]{4,5,6,7,0,1,2}, 0);
+//        Object result = new Solution33().search(new int[]{1,3 }, 3);
+//        Object result = new Solution1013().canThreePartsEqualSum(new int[]{10,-10,10,-10,10,-10,10,-10});
+        Object result =new Solution206().reverseList(createListNode("1->2->3->4->5"));
         print(result);
     }
 
