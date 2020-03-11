@@ -1,5 +1,6 @@
 package com.wormchaos.lc;
 
+import com.wormchaos.lc.sars.Solution1013;
 import com.wormchaos.lc.sars.Solution57_II;
 import com.wormchaos.lc.sars.Solution994;
 import com.wormchaos.lc.sliding_window.Solution5;
@@ -233,7 +234,8 @@ public class RunMethod {
 //        int[][] result = new Solution57_II().findContinuousSequence(15);
 //        Object result =new Solution67().addBinary("1", "11");
 //        Object result = new com.wormchaos.lc.sliding_window.normal.Solution137().singleNumber(new int[]{99,99,99,1});
-        Object result = new Solution33().search(new int[]{1}, 0);
+//        Object result = new Solution33().search(new int[]{1}, 0);
+        Object result = new Solution1013().canThreePartsEqualSum(new int[]{10,-10,10,-10,10,-10,10,-10});
         print(result);
     }
 
