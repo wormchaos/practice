@@ -16,7 +16,7 @@ public class Solution206 {
      * @return
      */
     public ListNode reverseList(ListNode head) {
-        if (head == null || head.next == null) {
+        if(null == head || null == head.next) {
             return head;
         }
         ListNode p = reverseList(head.next);

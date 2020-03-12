@@ -1,6 +1,7 @@
 package com.wormchaos.lc;
 
 import com.wormchaos.lc.sars.Solution1013;
+import com.wormchaos.lc.sars.Solution1071;
 import com.wormchaos.lc.sars.Solution57_II;
 import com.wormchaos.lc.sars.Solution994;
 import com.wormchaos.lc.sliding_window.Solution5;
@@ -237,7 +238,9 @@ public class RunMethod {
 //        Object result = new Solution33().search(new int[]{4,5,6,7,0,1,2}, 0);
 //        Object result = new Solution33().search(new int[]{1,3 }, 3);
 //        Object result = new Solution1013().canThreePartsEqualSum(new int[]{10,-10,10,-10,10,-10,10,-10});
-        Object result =new Solution206().reverseList(createListNode("1->2->3->4->5"));
+//        Object result =new Solution206().reverseList(createListNode("1->2->3->4->5"));
+//        Object result = new Solution1071().gcdOfStrings("ABABAB", "ABAB");
+        Object result = new Solution102().levelOrder(createTree(new Integer[]{3,9,20,null,null,15,7}, 0));
         print(result);
     }
 
