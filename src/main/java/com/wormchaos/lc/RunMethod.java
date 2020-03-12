@@ -240,7 +240,8 @@ public class RunMethod {
 //        Object result = new Solution1013().canThreePartsEqualSum(new int[]{10,-10,10,-10,10,-10,10,-10});
 //        Object result =new Solution206().reverseList(createListNode("1->2->3->4->5"));
 //        Object result = new Solution1071().gcdOfStrings("ABABAB", "ABAB");
-        Object result = new Solution102().levelOrder(createTree(new Integer[]{3,9,20,null,null,15,7}, 0));
+//        Object result = new Solution102().levelOrder(createTree(new Integer[]{3,9,20,null,null,15,7}, 0));
+        Object result =new Solution234().isPalindrome(createListNode("1->2->3->4->5"));
         print(result);
     }
 
