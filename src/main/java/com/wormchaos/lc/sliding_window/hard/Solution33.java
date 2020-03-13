@@ -7,9 +7,9 @@ public class Solution33 {
     public int search(int[] nums, int target) {
         int l = 0;
         int r = nums.length - 1;
-        while (l < r) {
+        while (l <= r) {
             int mid = (l + r) / 2;
-            if(nums[mid] == target) {
+            if (nums[mid] == target) {
                 return mid;
             } else {
                 // l 和mid之间
@@ -18,14 +18,18 @@ public class Solution33 {
                 boolean f3 = nums[mid] > nums[r] && target >= nums[r];
                 if (f1 || f2 || f3) {
                     r = mid - 1;
+                } else {
+                    // mid 和r之间
+                    boolean ff1 = nums[mid] < nums[r] && target <= nums[r];
+                    boolean ff2 = nums[mid] > nums[r] && target <= nums[r];
+                    boolean ff3 = nums[mid] < nums[l] && target <= nums[l];
+                    if (ff1 || ff2 || ff3) {
+                        l = mid + 1;
+                    } else {
+                        return -1;
+                    }
                 }
-                // mid 和r之间
-                boolean ff1 = nums[mid] < nums[r] && target < nums[r];
-                boolean ff2 = nums[mid] > nums[r] && target < nums[r];
-                boolean ff3 = nums[mid] < nums[l] && target < nums[l];
-                if (ff1 || ff2 || ff3) {
-                    l = mid + 1;
-                }
+
             }
         }
         return -1;

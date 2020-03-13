@@ -243,7 +243,11 @@ public class RunMethod {
 //        Object result = new Solution1071().gcdOfStrings("ABABAB", "ABAB");
 //        Object result = new Solution102().levelOrder(createTree(new Integer[]{3,9,20,null,null,15,7}, 0));
 //        Object result =new Solution234().isPalindrome(createListNode("1->2->3->4->5"));
-        Object result = new Solution229().majorityElement(new int[]{1,2,2,3,2,1,1,3});
+//        Object result = new Solution229().majorityElement(new int[]{1,2,2,3,2,1,1,3});
+//        Object result = new Solution150().evalRPN(new String[]{"10","6","9","3","+","-11","*","/","*","17","+","5","+"});
+//        Object result = new Solution150().evalRPN(new String[]{"4","13","5","/","+"});
+//        Object result = new Solution150().evalRPN(new String[]{"4","3","-"});
+        Object result = new Solution150().evalRPN(new String[]{"3","11","+", "5", "-"});
         print(result);
     }
 
