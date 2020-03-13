@@ -161,6 +161,7 @@ public class RunMethod {
 //        Object result = new Solution322().coinChange(new int[]{2,4}, 5);
 //        Object result = new Solution375().getMoneyAmount(100);
 //        Object result = new Solution169().majorityElement(new int[]{6, 6, 6, 7, 7});
+        Object result = new Solution169().majorityElement(new int[]{2,2,1,1,1,2,2});
 //        Object result = new Solution10().isMatch("aa", "a*");
 //        Object result =  new Solution41().firstMissingPositive(new int[]{3,4,-1,1});
 //        int arr[][] = {{1,0,7,0,0,0},{2,0,6,0,1,0},{3,5,6,7,4,2},{4,3,1,0,2,0},{3,0,5,0,20,0}};
@@ -241,7 +242,7 @@ public class RunMethod {
 //        Object result =new Solution206().reverseList(createListNode("1->2->3->4->5"));
 //        Object result = new Solution1071().gcdOfStrings("ABABAB", "ABAB");
 //        Object result = new Solution102().levelOrder(createTree(new Integer[]{3,9,20,null,null,15,7}, 0));
-        Object result =new Solution234().isPalindrome(createListNode("1->2->3->4->5"));
+//        Object result =new Solution234().isPalindrome(createListNode("1->2->3->4->5"));
         print(result);
     }
 
