@@ -199,7 +199,6 @@ public class RunMethod {
 //        int[] arr1 = new int[]{1, 2, 3, 0, 0, 0};
 //        new Solution88().merge(arr1, 0, new int[]{2, 5, 6}, 3);
 //        Object result = new Solution33().search(new int[]{4,5,6,7,0,1,2}, 0);
-        System.out.println("time :" + (System.currentTimeMillis() - a));
 //        int[][] result = new Solution59().generateMatrix(5);
 //        Object result = new Solution60().getPermutation(5, 118);
 //        ListNode l = createListNode("1->2->3->4->5");
@@ -240,7 +239,10 @@ public class RunMethod {
 //        Object result = new Solution150().evalRPN(new String[]{"4","13","5","/","+"});
 //        Object result = new Solution150().evalRPN(new String[]{"4","3","-"});
 //        Object result = new Solution150().evalRPN(new String[]{"3","11","+", "5", "-"});
-        Object result = new Solution01_06().compressString("aabcccccaa");
+//        Object result = new Solution01_06().compressString("aabcccccaa");
+//        boolean result = new Solution464().canIWin(20, 210);
+        boolean result = new Solution464().canIWin(4, 6);
+        System.out.println("time :" + (System.currentTimeMillis() - a));
         print(result);
     }
 
