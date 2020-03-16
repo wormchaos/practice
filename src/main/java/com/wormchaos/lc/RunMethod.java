@@ -241,7 +241,16 @@ public class RunMethod {
 //        Object result = new Solution150().evalRPN(new String[]{"3","11","+", "5", "-"});
 //        Object result = new Solution01_06().compressString("aabcccccaa");
 //        boolean result = new Solution464().canIWin(20, 210);
-        boolean result = new Solution464().canIWin(4, 6);
+//        boolean result = new Solution464().canIWin(4, 6);
+        int[][] grid = new int[][]{{0,0,1,0,0,0,0,1,0,0,0,0,0},
+                {0,0,0,0,0,0,0,1,1,1,0,0,0},
+                {0,1,1,0,1,0,0,0,0,0,0,0,0},
+                {0,1,0,0,1,1,0,0,1,0,1,0,0},
+                {0,1,0,0,1,1,0,0,1,1,1,0,0},
+                {0,0,0,0,0,0,0,0,0,0,1,0,0},
+                {0,0,0,0,0,0,0,1,1,1,0,0,0},
+                {0,0,0,0,0,0,0,1,1,0,0,0,0}};
+        Object result = new Solution695().maxAreaOfIsland(grid);
         System.out.println("time :" + (System.currentTimeMillis() - a));
         print(result);
     }
