@@ -1,13 +1,6 @@
 package com.wormchaos.lc;
 
-import com.wormchaos.lc.sars.Solution1013;
-import com.wormchaos.lc.sars.Solution1071;
-import com.wormchaos.lc.sars.Solution57_II;
-import com.wormchaos.lc.sars.Solution994;
-import com.wormchaos.lc.sliding_window.Solution5;
-import com.wormchaos.lc.sliding_window.easy.Solution137;
-import com.wormchaos.lc.sliding_window.easy.Solution83;
-import com.wormchaos.lc.sliding_window.easy.Solution88;
+import com.wormchaos.lc.sars.*;
 import com.wormchaos.lc.sliding_window.hard.*;
 import com.wormchaos.lc.sliding_window.normal.*;
 import com.wormchaos.lc.sliding_window.easy.*;
@@ -15,7 +8,6 @@ import com.wormchaos.lc.toolbean.ListNode;
 import com.wormchaos.lc.toolbean.TreeNode;
 
 import java.util.*;
-import java.util.concurrent.SynchronousQueue;
 
 /**
  * Created by wormchaos on 2019-12-16.
@@ -247,7 +239,8 @@ public class RunMethod {
 //        Object result = new Solution150().evalRPN(new String[]{"10","6","9","3","+","-11","*","/","*","17","+","5","+"});
 //        Object result = new Solution150().evalRPN(new String[]{"4","13","5","/","+"});
 //        Object result = new Solution150().evalRPN(new String[]{"4","3","-"});
-        Object result = new Solution150().evalRPN(new String[]{"3","11","+", "5", "-"});
+//        Object result = new Solution150().evalRPN(new String[]{"3","11","+", "5", "-"});
+        Object result = new Solution01_06().compressString("aabcccccaa");
         print(result);
     }
 
