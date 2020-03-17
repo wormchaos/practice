@@ -242,15 +242,17 @@ public class RunMethod {
 //        Object result = new Solution01_06().compressString("aabcccccaa");
 //        boolean result = new Solution464().canIWin(20, 210);
 //        boolean result = new Solution464().canIWin(4, 6);
-        int[][] grid = new int[][]{{0,0,1,0,0,0,0,1,0,0,0,0,0},
-                {0,0,0,0,0,0,0,1,1,1,0,0,0},
-                {0,1,1,0,1,0,0,0,0,0,0,0,0},
-                {0,1,0,0,1,1,0,0,1,0,1,0,0},
-                {0,1,0,0,1,1,0,0,1,1,1,0,0},
-                {0,0,0,0,0,0,0,0,0,0,1,0,0},
-                {0,0,0,0,0,0,0,1,1,1,0,0,0},
-                {0,0,0,0,0,0,0,1,1,0,0,0,0}};
-        Object result = new Solution695().maxAreaOfIsland(grid);
+//        int[][] grid = new int[][]{{0,0,1,0,0,0,0,1,0,0,0,0,0},
+//                {0,0,0,0,0,0,0,1,1,1,0,0,0},
+//                {0,1,1,0,1,0,0,0,0,0,0,0,0},
+//                {0,1,0,0,1,1,0,0,1,0,1,0,0},
+//                {0,1,0,0,1,1,0,0,1,1,1,0,0},
+//                {0,0,0,0,0,0,0,0,0,0,1,0,0},
+//                {0,0,0,0,0,0,0,1,1,1,0,0,0},
+//                {0,0,0,0,0,0,0,1,1,0,0,0,0}};
+//        Object result = new Solution695().maxAreaOfIsland(grid);
+        int[][] grid = new int[][]{{3,0,8,4},{2,4,5,7},{9,2,6,3},{0,3,1,0}};
+        Object result = new Solution807().maxIncreaseKeepingSkyline(grid);
         System.out.println("time :" + (System.currentTimeMillis() - a));
         print(result);
     }
