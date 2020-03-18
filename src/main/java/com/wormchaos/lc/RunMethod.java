@@ -253,9 +253,10 @@ public class RunMethod {
 //        Object result = new Solution695().maxAreaOfIsland(grid);
 //        int[][] grid = new int[][]{{3,0,8,4},{2,4,5,7},{9,2,6,3},{0,3,1,0}};
 //        Object result = new Solution807().maxIncreaseKeepingSkyline(grid);
-        int[][] grid = new int[][]{{1,1,3,2,4,3,2},{1,1,3,2,4,3,2},{1,1,3,2,4,3,2}};
-//        int[][] grid = new int[][]{{1,1,1,1},{1,0,0,0},{1,0,0,0},{1,0,0,0}};
-        Object result = new Solution1292().maxSideLength(grid, 4);
+//        int[][] grid = new int[][]{{1,1,3,2,4,3,2},{1,1,3,2,4,3,2},{1,1,3,2,4,3,2}};
+        int[][] grid = new int[][]{{1,1,1,1},{1,0,0,0},{1,0,0,0},{1,0,0,0}};
+//        Object result = new Solution1292().maxSideLength(grid, 4);
+        int[][] result = new Solution1314().matrixBlockSum(grid, 0);
         System.out.println("time :" + (System.currentTimeMillis() - a));
         print(result);
     }
