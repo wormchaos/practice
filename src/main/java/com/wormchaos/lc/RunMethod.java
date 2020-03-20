@@ -2,8 +2,10 @@ package com.wormchaos.lc;
 
 import com.wormchaos.lc.sars.*;
 import com.wormchaos.lc.sliding_window.hard.*;
+import com.wormchaos.lc.sliding_window.mensetsu.Solution40;
 import com.wormchaos.lc.sliding_window.normal.*;
 import com.wormchaos.lc.sliding_window.easy.*;
+import com.wormchaos.lc.sliding_window.mensetsu.*;
 import com.wormchaos.lc.toolbean.ListNode;
 import com.wormchaos.lc.toolbean.TreeNode;
 
@@ -257,7 +259,10 @@ public class RunMethod {
 //        int[][] grid = new int[][]{{1,1,1,1},{1,0,0,0},{1,0,0,0},{1,0,0,0}};
 //        Object result = new Solution1292().maxSideLength(grid, 4);
 //        int[][] result = new Solution1314().matrixBlockSum(grid, 0);
-        Object result = new Solution825().numFriendRequests(new int[]{16,17,18});
+//        Object result = new Solution825().numFriendRequests(new int[]{16,17,18});
+//        int[] result = new Solution40().getLeastNumbers(new int[]{3,1,56,1,6,15,2}, 4);
+        int[] result = new Solution40().getLeastNumbers(new int[]{3,2,1}, 2);
+//        int result = new Solution215().findKthLargest(new int[]{3,1,56,1,6,15,2}, 4);
         System.out.println("time :" + (System.currentTimeMillis() - a));
         print(result);
     }
