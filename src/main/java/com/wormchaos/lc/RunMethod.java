@@ -260,7 +260,7 @@ public class RunMethod {
 //        int[] result = new Solution40().getLeastNumbers(new int[]{0,0,1,2,4,2,2,3,1,4}, 8);
 //        int[] result = new Solution40().getLeastNumbers(new int[]{3,2,1}, 2);
 //        int result = new Solution215().findKthLargest(new int[]{3,1,56,1,6,15,2}, 4);
-        String[] result = new Solution08_07().permutation("ABC");
+        String[] result = new Solution08_07().permutation_switch("qwe");
         System.out.println("time :" + (System.currentTimeMillis() - a));
         print(result);
     }

@@ -29,6 +29,7 @@ public class Turnip {
         int buyPrize = 98;
         int[] arr = new int[12];
         arr[0] = 93;
+        arr[1] = 109;
 //        arr[0] = 20;
         buy(arr, buyPrize);
     }
