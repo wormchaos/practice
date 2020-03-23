@@ -1,5 +1,6 @@
 package com.wormchaos.lc;
 
+import com.wormchaos.lc.sliding_window.mensetsu.Solution08_07;
 import com.wormchaos.lc.sliding_window.mensetsu.Solution40;
 import com.wormchaos.lc.toolbean.ListNode;
 import com.wormchaos.lc.toolbean.TreeNode;
@@ -256,9 +257,10 @@ public class RunMethod {
 //        int[][] result = new Solution1314().matrixBlockSum(grid, 0);
 //        Object result = new Solution825().numFriendRequests(new int[]{16,17,18});
 //        int[] result = new Solution40().getLeastNumbers(new int[]{3,1,56,1,6,15,2}, 4);
-        int[] result = new Solution40().getLeastNumbers(new int[]{0,0,1,2,4,2,2,3,1,4}, 8);
+//        int[] result = new Solution40().getLeastNumbers(new int[]{0,0,1,2,4,2,2,3,1,4}, 8);
 //        int[] result = new Solution40().getLeastNumbers(new int[]{3,2,1}, 2);
 //        int result = new Solution215().findKthLargest(new int[]{3,1,56,1,6,15,2}, 4);
+        String[] result = new Solution08_07().permutation("ABC");
         System.out.println("time :" + (System.currentTimeMillis() - a));
         print(result);
     }
@@ -331,7 +333,7 @@ public class RunMethod {
         }
     }
 
-    private static void print(int[][] arr) {
+    private static void print(Object[][] arr) {
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr[i].length; j++) {
                 System.out.print(arr[i][j] + " ");
@@ -340,7 +342,7 @@ public class RunMethod {
         }
     }
 
-    private static void print(int[] arr) {
+    private static void print(Object[] arr) {
         for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] + " ");
         }
