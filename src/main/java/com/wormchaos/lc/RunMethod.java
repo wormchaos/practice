@@ -1,11 +1,6 @@
 package com.wormchaos.lc;
 
-import com.wormchaos.lc.sars.*;
-import com.wormchaos.lc.sliding_window.hard.*;
 import com.wormchaos.lc.sliding_window.mensetsu.Solution40;
-import com.wormchaos.lc.sliding_window.normal.*;
-import com.wormchaos.lc.sliding_window.easy.*;
-import com.wormchaos.lc.sliding_window.mensetsu.*;
 import com.wormchaos.lc.toolbean.ListNode;
 import com.wormchaos.lc.toolbean.TreeNode;
 

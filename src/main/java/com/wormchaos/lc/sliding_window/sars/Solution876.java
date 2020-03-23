@@ -1,8 +1,6 @@
-package com.wormchaos.lc.sars;
+package com.wormchaos.lc.sliding_window.sars;
 
 import com.wormchaos.lc.toolbean.ListNode;
-
-import java.util.List;
 
 /**
  * Created by wormchaos on 2020-3-23.

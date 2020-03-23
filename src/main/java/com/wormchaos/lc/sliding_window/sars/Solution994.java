@@ -1,6 +1,5 @@
-package com.wormchaos.lc.sars;
+package com.wormchaos.lc.sliding_window.sars;
 
-import java.util.ArrayDeque;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Map;

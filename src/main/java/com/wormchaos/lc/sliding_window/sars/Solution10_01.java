@@ -1,4 +1,4 @@
-package com.wormchaos.lc.sars;
+package com.wormchaos.lc.sliding_window.sars;
 
 /**
  * Created by wormchaos on 2020-3-3.

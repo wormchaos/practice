@@ -1,4 +1,4 @@
-package com.wormchaos.lc.sars;
+package com.wormchaos.lc.sliding_window.sars;
 
 import com.wormchaos.lc.toolbean.TreeNode;
 
