@@ -1,7 +1,6 @@
 package com.wormchaos.lc;
 
-import com.wormchaos.lc.sliding_window.mensetsu.Solution08_07;
-import com.wormchaos.lc.sliding_window.mensetsu.Solution40;
+import com.wormchaos.lc.sliding_window.sars.*;
 import com.wormchaos.lc.toolbean.ListNode;
 import com.wormchaos.lc.toolbean.TreeNode;
 
@@ -260,7 +259,8 @@ public class RunMethod {
 //        int[] result = new Solution40().getLeastNumbers(new int[]{0,0,1,2,4,2,2,3,1,4}, 8);
 //        int[] result = new Solution40().getLeastNumbers(new int[]{3,2,1}, 2);
 //        int result = new Solution215().findKthLargest(new int[]{3,1,56,1,6,15,2}, 4);
-        String[] result = new Solution08_07().permutation_switch("qwe");
+//        String[] result = new Solution08_07().permutation_switch("qwe");
+        Object result = new Solution17_16().massage(new int[]{1,2,3,1});
         System.out.println("time :" + (System.currentTimeMillis() - a));
         print(result);
     }
