@@ -1,6 +1,7 @@
 package com.wormchaos.lc;
 
 import com.wormchaos.lc.sliding_window.normal.Solution1282;
+import com.wormchaos.lc.sliding_window.normal.Solution950;
 import com.wormchaos.lc.sliding_window.sars.*;
 import com.wormchaos.lc.toolbean.ListNode;
 import com.wormchaos.lc.toolbean.TreeNode;
@@ -218,7 +219,7 @@ public class RunMethod {
 //        Object result = new Solution219().containsNearbyDuplicate(new int[]{1,1,1,1}, 1);
 //        Object result = new Solution125().isPalindrome("A man, a plan, a canal: Panama");
 //        int arr[][] = {{2,1,1},{1,1,0},{0,1,1}};
-        int arr[][] = {{2,2,2,1,1}};
+        int arr[][] = {{2, 2, 2, 1, 1}};
 //        int arr[][] = {{1},{2},{1},{2}};
 //        [[2,1,1],[0,1,1],[1,0,1]]
 //        Object result = new Solution994().orangesRotting(arr);
@@ -262,7 +263,9 @@ public class RunMethod {
 //        int result = new Solution215().findKthLargest(new int[]{3,1,56,1,6,15,2}, 4);
 //        String[] result = new Solution08_07().permutation_switch("qwe");
 //        Object result = new Solution17_16().massage(new int[]{1,2,3,1});
-        Object result = new Solution1282().groupThePeople(new int[]{3,3,3,3,3,1,3});
+//        Object result = new Solution1282().groupThePeople(new int[]{3,3,3,3,3,1,3});
+        Object result = new Solution950().deckRevealedIncreasing(new int[]
+                {17, 13, 11, 2, 3, 5, 7});
         System.out.println("time :" + (System.currentTimeMillis() - a));
         print(result);
     }
