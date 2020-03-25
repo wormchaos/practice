@@ -32,6 +32,8 @@ public class Turnip {
         arr[1] = 109;
         arr[2] = 121;
         arr[3] = 133;
+        arr[4] = 135;
+        int[] a = new int[]{93,109,121,133,135};
 //        arr[0] = 20;
         buy(arr, buyPrize);
     }
