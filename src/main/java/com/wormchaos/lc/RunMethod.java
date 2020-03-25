@@ -1,5 +1,6 @@
 package com.wormchaos.lc;
 
+import com.wormchaos.lc.sliding_window.hard.Solution891;
 import com.wormchaos.lc.sliding_window.normal.Solution1282;
 import com.wormchaos.lc.sliding_window.normal.Solution950;
 import com.wormchaos.lc.sliding_window.sars.*;
@@ -264,8 +265,10 @@ public class RunMethod {
 //        String[] result = new Solution08_07().permutation_switch("qwe");
 //        Object result = new Solution17_16().massage(new int[]{1,2,3,1});
 //        Object result = new Solution1282().groupThePeople(new int[]{3,3,3,3,3,1,3});
-        Object result = new Solution950().deckRevealedIncreasing(new int[]
-                {17, 13, 11, 2, 3, 5, 7});
+//        Object result = new Solution950().deckRevealedIncreasing(new int[]
+//                {17, 13, 11, 2, 3, 5, 7});
+//        Object result = new Solution891().sumSubseqWidths(new int[]{2,1,3});
+        Object result = new Solution891().sumSubseqWidths(new int[]{3,7,2,3});
         System.out.println("time :" + (System.currentTimeMillis() - a));
         print(result);
     }
