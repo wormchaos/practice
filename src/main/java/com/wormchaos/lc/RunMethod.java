@@ -2,11 +2,14 @@ package com.wormchaos.lc;
 
 import com.wormchaos.lc.sliding_window.hard.Solution891;
 import com.wormchaos.lc.sliding_window.normal.Solution1282;
+import com.wormchaos.lc.sliding_window.normal.Solution814;
 import com.wormchaos.lc.sliding_window.normal.Solution950;
 import com.wormchaos.lc.sliding_window.sars.*;
+import com.wormchaos.lc.test.Tree;
 import com.wormchaos.lc.toolbean.ListNode;
 import com.wormchaos.lc.toolbean.TreeNode;
 
+import javax.naming.ldap.PagedResultsControl;
 import java.util.*;
 
 /**
@@ -268,7 +271,8 @@ public class RunMethod {
 //        Object result = new Solution950().deckRevealedIncreasing(new int[]
 //                {17, 13, 11, 2, 3, 5, 7});
 //        Object result = new Solution891().sumSubseqWidths(new int[]{2,1,3});
-        Object result = new Solution891().sumSubseqWidths(new int[]{3,7,2,3});
+//        Object result = new Solution891().sumSubseqWidths(new int[]{3,7,2,3});
+        TreeNode result = new Solution814().pruneTree(createTree(new Integer[]{1, 0, 1, 0, 0, 0, 1}, 0));
         System.out.println("time :" + (System.currentTimeMillis() - a));
         print(result);
     }
@@ -350,9 +354,37 @@ public class RunMethod {
         }
     }
 
+    private static void print(TreeNode treeNode) {
+        // 层次遍历
+        List<Integer[]> result = new ArrayList<>();
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.add(treeNode);
+        int level = 0;
+        while (!queue.isEmpty()) {
+            int size = queue.size();
+            Integer[] temp = new Integer[(int) Math.pow(2, level)];
+            for (int i = 0; i < size; i++) {
+                TreeNode t = queue.poll();
+                temp[i] = t.val;
+                if (t.left != null) {
+                    queue.add(t.left);
+                }
+                if (t.right != null) {
+                    queue.add(t.right);
+                }
+            }
+            result.add(temp);
+            level++;
+        }
+        for (Integer[] tt : result) {
+            print(tt);
+        }
+//        Integer[] a = new Integer[(int) Math.pow(2, level + 1)];
+    }
+
     private static void print(Object[] arr) {
         for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i] + " ");
+            System.out.print((null == arr[i] ? "null" : arr[i]) + " ");
         }
     }
 
