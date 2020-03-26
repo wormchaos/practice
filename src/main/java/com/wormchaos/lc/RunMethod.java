@@ -4,6 +4,7 @@ import com.wormchaos.lc.sliding_window.hard.Solution891;
 import com.wormchaos.lc.sliding_window.mensetsu.Solution07;
 import com.wormchaos.lc.sliding_window.mensetsu.Solution16_20;
 import com.wormchaos.lc.sliding_window.mensetsu.Solution47;
+import com.wormchaos.lc.sliding_window.mensetsu.Solution61;
 import com.wormchaos.lc.sliding_window.normal.Solution1282;
 import com.wormchaos.lc.sliding_window.normal.Solution814;
 import com.wormchaos.lc.sliding_window.normal.Solution877;
@@ -284,7 +285,8 @@ public class RunMethod {
 //        int[][] grid = new int[][]{{1,3,1},{1,5,1},{4,2,1}};
 //        Object result = new Solution47().maxValue(grid);
 //        TreeNode result = new Solution07().buildTree(new int[]{3, 9, 20, 15, 7}, new int[]{9, 3, 15, 20, 7});
-        TreeNode result = new Solution07().buildTree(new int[]{1, 2, 3}, new int[]{2, 3, 1});
+//        TreeNode result = new Solution07().buildTree(new int[]{1, 2, 3}, new int[]{2, 3, 1});
+        Object result = new Solution61().maxProfit(new int[]{2,4,1});
         System.out.println("time :" + (System.currentTimeMillis() - a));
         print(result);
     }
