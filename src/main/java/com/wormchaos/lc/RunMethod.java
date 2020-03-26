@@ -3,6 +3,7 @@ package com.wormchaos.lc;
 import com.wormchaos.lc.sliding_window.hard.Solution891;
 import com.wormchaos.lc.sliding_window.normal.Solution1282;
 import com.wormchaos.lc.sliding_window.normal.Solution814;
+import com.wormchaos.lc.sliding_window.normal.Solution877;
 import com.wormchaos.lc.sliding_window.normal.Solution950;
 import com.wormchaos.lc.sliding_window.sars.*;
 import com.wormchaos.lc.test.Tree;
@@ -272,7 +273,10 @@ public class RunMethod {
 //                {17, 13, 11, 2, 3, 5, 7});
 //        Object result = new Solution891().sumSubseqWidths(new int[]{2,1,3});
 //        Object result = new Solution891().sumSubseqWidths(new int[]{3,7,2,3});
-        TreeNode result = new Solution814().pruneTree(createTree(new Integer[]{1, 0, 1, 0, 0, 0, 1}, 0));
+//        TreeNode result = new Solution814().pruneTree(createTree(new Integer[]{1, 0, 1, 0, 0, 0, 1}, 0));
+//        Object result = new Solution877().stoneGame(new int[]{3,2,10,4});
+//        Object result = new Solution877().stoneGame(new int[]{3,7,3,2,5,1,6,3,10,7});
+        Object result = new Solution877().stoneGame(new int[]{3,7,3,2,5,1,6,3,10,7});
         System.out.println("time :" + (System.currentTimeMillis() - a));
         print(result);
     }
