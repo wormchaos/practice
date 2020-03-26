@@ -1,6 +1,7 @@
 package com.wormchaos.lc;
 
 import com.wormchaos.lc.sliding_window.hard.Solution891;
+import com.wormchaos.lc.sliding_window.mensetsu.Solution16_20;
 import com.wormchaos.lc.sliding_window.normal.Solution1282;
 import com.wormchaos.lc.sliding_window.normal.Solution814;
 import com.wormchaos.lc.sliding_window.normal.Solution877;
@@ -276,7 +277,8 @@ public class RunMethod {
 //        TreeNode result = new Solution814().pruneTree(createTree(new Integer[]{1, 0, 1, 0, 0, 0, 1}, 0));
 //        Object result = new Solution877().stoneGame(new int[]{3,2,10,4});
 //        Object result = new Solution877().stoneGame(new int[]{3,7,3,2,5,1,6,3,10,7});
-        Object result = new Solution877().stoneGame(new int[]{3,7,3,2,5,1,6,3,10,7});
+//        Object result = new Solution877().stoneGame(new int[]{3,7,3,2,5,1,6,3,10,7});
+        Object result = new Solution16_20().getValidT9Words("8733", new String[]{"tree", "used"});
         System.out.println("time :" + (System.currentTimeMillis() - a));
         print(result);
     }
