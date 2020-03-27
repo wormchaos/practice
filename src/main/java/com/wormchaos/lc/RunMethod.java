@@ -286,7 +286,8 @@ public class RunMethod {
 //        Object result = new Solution47().maxValue(grid);
 //        TreeNode result = new Solution07().buildTree(new int[]{3, 9, 20, 15, 7}, new int[]{9, 3, 15, 20, 7});
 //        TreeNode result = new Solution07().buildTree(new int[]{1, 2, 3}, new int[]{2, 3, 1});
-        Object result = new Solution61().maxProfit(new int[]{2,4,1});
+//        Object result = new Solution61().maxProfit(new int[]{2,4,1});
+        Object result = new Solution914().hasGroupsSizeX(new int[]{1,1,2,2,2,2});
         System.out.println("time :" + (System.currentTimeMillis() - a));
         print(result);
     }
