@@ -10,6 +10,7 @@ import com.wormchaos.lc.sliding_window.normal.Solution1282;
 import com.wormchaos.lc.sliding_window.normal.Solution814;
 import com.wormchaos.lc.sliding_window.normal.Solution877;
 import com.wormchaos.lc.sliding_window.normal.Solution89;
+import com.wormchaos.lc.sliding_window.normal.Solution90;
 import com.wormchaos.lc.sliding_window.normal.Solution950;
 import com.wormchaos.lc.sliding_window.sars.*;
 import com.wormchaos.lc.test.Tree;
@@ -290,7 +291,8 @@ public class RunMethod {
 //        TreeNode result = new Solution07().buildTree(new int[]{1, 2, 3}, new int[]{2, 3, 1});
 //        Object result = new Solution61().maxProfit(new int[]{2,4,1});
 //        Object result = new Solution914().hasGroupsSizeX(new int[]{1,1,2,2,2,2});
-        Object result = new Solution89().grayCode(4);
+//        Object result = new Solution89().grayCode(4);
+        Object result = new Solution90().subsetsWithDup(new int[]{1,2,2});
         System.out.println("time :" + (System.currentTimeMillis() - a));
         print(result);
     }
