@@ -14,7 +14,7 @@ public class Solution914 {
         }
         int min = -1;
         for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
-            if(min < 0) {
+            if (min < 0) {
                 min = entry.getValue();
             }
             min = gcd(min, entry.getValue());
@@ -32,15 +32,21 @@ public class Solution914 {
     }
 
     // 获取最大公约数
-    private int gcd(int a, int b) {
-        if (a < b) {
-            a ^= b;
-            b ^= a;
-            a ^= b;
-        }
-        if(b == 0) {
-            return a;
-        }
-        return gcd(b, a - (a / b) * b);
+//    private int gcd(int a, int b) {
+//        if (a < b) {
+//            a ^= b;
+//            b ^= a;
+//            a ^= b;
+//        }
+//        if(b == 0) {
+//            return a;
+//        }
+//        return gcd(b, a - (a / b) * b);
+//    }
+
+
+    public int gcd(int x, int y) {
+        return x == 0 ? y : gcd(y % x, x);
     }
+
 }
