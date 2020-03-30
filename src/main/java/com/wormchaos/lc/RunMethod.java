@@ -11,6 +11,7 @@ import com.wormchaos.lc.sliding_window.normal.Solution814;
 import com.wormchaos.lc.sliding_window.normal.Solution877;
 import com.wormchaos.lc.sliding_window.normal.Solution89;
 import com.wormchaos.lc.sliding_window.normal.Solution90;
+import com.wormchaos.lc.sliding_window.normal.Solution95;
 import com.wormchaos.lc.sliding_window.normal.Solution950;
 import com.wormchaos.lc.sliding_window.sars.*;
 import com.wormchaos.lc.test.Tree;
@@ -292,7 +293,8 @@ public class RunMethod {
 //        Object result = new Solution61().maxProfit(new int[]{2,4,1});
 //        Object result = new Solution914().hasGroupsSizeX(new int[]{1,1,2,2,2,2});
 //        Object result = new Solution89().grayCode(4);
-        Object result = new Solution90().subsetsWithDup(new int[]{1,2,2});
+//        Object result = new Solution90().subsetsWithDup(new int[]{1,2,2});
+        List<TreeNode> result = new Solution95().generateTrees(3);
         System.out.println("time :" + (System.currentTimeMillis() - a));
         print(result);
     }
@@ -410,6 +412,11 @@ public class RunMethod {
 
     private static void print(Object object) {
         System.out.println(object);
+    }
+    private static void print(List<?> list) {
+        for (Object l : list) {
+            print(l);
+        }
     }
 
     private static void print(ListNode l) {
