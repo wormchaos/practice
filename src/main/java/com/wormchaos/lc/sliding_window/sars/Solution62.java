@@ -9,22 +9,38 @@ import java.util.Queue;
 public class Solution62 {
 
     /**
-     * 长度为n的队列，按m个排序，留下第几个数
+     * 防止栈溢出，改成迭代
+     *
      * @param n
      * @param m
      */
     public int lastRemaining(int n, int m) {
-        if(n == 1) {
+        int p = 0;
+        for (int i = 1; i < n; i++) {
+//            p = (m % n +p) % n;
+            p = (m + p) % (i + 1);
+        }
+        return p;
+    }
+
+    /**
+     * 长度为n的队列，按m个排序，留下第几个数
+     *
+     * @param n
+     * @param m
+     */
+    public int lastRemaining_loop(int n, int m) {
+        if (n == 1) {
             return 0;
         }
-        int num = lastRemaining(n-1, m);
-        return (num + m ) % n;
-
+        int num = lastRemaining(n - 1, m);
+        return (num + m) % n;
     }
 
 
     /**
      * 队列模拟（超时）
+     *
      * @param n
      * @param m
      * @return
@@ -36,7 +52,7 @@ public class Solution62 {
         }
         while (queue.size() > 1) {
             Integer size = queue.size();
-            for (int i =0; i < m-1; i++) {
+            for (int i = 0; i < m - 1; i++) {
                 queue.add(queue.poll());
             }
             queue.poll();

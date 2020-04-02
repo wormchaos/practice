@@ -294,9 +294,15 @@ public class RunMethod {
 //        Object result = new Solution914().hasGroupsSizeX(new int[]{1,1,2,2,2,2});
 //        Object result = new Solution89().grayCode(4);
 //        Object result = new Solution90().subsetsWithDup(new int[]{1,2,2});
-        List<TreeNode> result = new Solution95().generateTrees(3);
+//        List<TreeNode> result = new Solution95().generateTrees(3);
+//        int[] result = new Solution912().sortArray(new int[]{5, 2, 3, 1});
+//        int[] result = new Solution912().sortArray(new int[]{5, 1, 1, 2, 0, 0});
+//        int[] result = new Solution912().sortArray(new int[]{-4, 0, 7, 4, 9, -5, -1, 0, -7, -1});
+//        int[][] v = new int[][]{{0,1,0},{0,0,1},{1,1,1},{0,0,0}};
+        int[][] v = new int[][]{{0}};
+        new Solution289().gameOfLife(v);
         System.out.println("time :" + (System.currentTimeMillis() - a));
-        print(result);
+        print(v);
     }
 
     private static TreeNode converFromArray(Integer[] a) {
@@ -410,9 +416,24 @@ public class RunMethod {
         }
     }
 
+    private static void print(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+    }
+    private static void print(int[][] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            for (int j=0; j <arr[0].length; j++) {
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+
     private static void print(Object object) {
         System.out.println(object);
     }
+
     private static void print(List<?> list) {
         for (Object l : list) {
             print(l);
