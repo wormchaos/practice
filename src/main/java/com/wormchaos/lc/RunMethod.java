@@ -299,10 +299,12 @@ public class RunMethod {
 //        int[] result = new Solution912().sortArray(new int[]{5, 1, 1, 2, 0, 0});
 //        int[] result = new Solution912().sortArray(new int[]{-4, 0, 7, 4, 9, -5, -1, 0, -7, -1});
 //        int[][] v = new int[][]{{0,1,0},{0,0,1},{1,1,1},{0,0,0}};
-        int[][] v = new int[][]{{0}};
-        new Solution289().gameOfLife(v);
+//        int[][] v = new int[][]{{0}};
+//        new Solution289().gameOfLife(v);
+        int matrix[][] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+        new Solution01_07().rotate(matrix);
         System.out.println("time :" + (System.currentTimeMillis() - a));
-        print(v);
+        print(matrix);
     }
 
     private static TreeNode converFromArray(Integer[] a) {
@@ -421,9 +423,10 @@ public class RunMethod {
             System.out.print(arr[i] + " ");
         }
     }
+
     private static void print(int[][] arr) {
         for (int i = 0; i < arr.length; i++) {
-            for (int j=0; j <arr[0].length; j++) {
+            for (int j = 0; j < arr[0].length; j++) {
                 System.out.print(arr[i][j] + " ");
             }
             System.out.println();
