@@ -2,6 +2,9 @@ package com.wormchaos.lc.sliding_window.sars;
 
 import com.wormchaos.lc.toolbean.ListNode;
 
+import java.util.Queue;
+import java.util.Stack;
+
 /**
  * Created by wormchaos on 2020-4-14.
  */
@@ -11,7 +14,37 @@ public class Solution445 {
 
     private int step = 0;
 
+
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+        Stack<Integer> q1 = new Stack<>();
+        while (l1 != null) {
+            q1.push(l1.val);
+            l1 = l1.next;
+        }
+        Stack<Integer> q2 = new Stack<>();
+        while (l2 != null) {
+            q2.push(l2.val);
+            l2 = l2.next;
+        }
+        int addC = 0;
+        ListNode head = null;
+        while (!q1.isEmpty() || !q2.isEmpty() || addC > 0) {
+            int c = (q1.isEmpty() ? 0 : q1.pop()) + (q2.isEmpty() ? 0 : q2.pop()) + addC;
+            addC = 0;
+            if (c >= 10) {
+                addC = c/10;
+                c %= 10;
+            }
+            ListNode temp = new ListNode(c);
+            temp.next = head;
+            head = temp;
+
+        }
+        return head;
+    }
+
+
+    public ListNode addTwoNumbers_V1(ListNode l1, ListNode l2) {
         if (null == l1) {
             return l2;
         }
@@ -32,7 +65,7 @@ public class Solution445 {
         }
         ListNode result = new ListNode(1);
         result.next = add(h1, h2);
-        if (addCount > 0){
+        if (addCount > 0) {
             return result;
         }
         return h1;
