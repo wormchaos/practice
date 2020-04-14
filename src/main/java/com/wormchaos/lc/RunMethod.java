@@ -301,10 +301,14 @@ public class RunMethod {
 //        int[][] v = new int[][]{{0,1,0},{0,0,1},{1,1,1},{0,0,0}};
 //        int[][] v = new int[][]{{0}};
 //        new Solution289().gameOfLife(v);
-        int matrix[][] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
-        new Solution01_07().rotate(matrix);
+//        int matrix[][] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+//        new Solution01_07().rotate(matrix);
+        ListNode result = new Solution445().addTwoNumbers(createListNode("2"), createListNode("9->9->9"));
+//        ListNode result = new Solution445().addTwoNumbers(createListNode("0"), createListNode("1->8->4->0"));
+//        ListNode result = new Solution445().addTwoNumbers(createListNode("9->1->6"), createListNode("0"));
+//        ListNode result = new Solution445().addTwoNumbers(createListNode("1->2->7"), createListNode("9->8->7->3"));
         System.out.println("time :" + (System.currentTimeMillis() - a));
-        print(matrix);
+        print(result);
     }
 
     private static TreeNode converFromArray(Integer[] a) {
