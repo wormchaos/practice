@@ -7,6 +7,7 @@ import com.wormchaos.lc.sliding_window.mensetsu.Solution16_20;
 import com.wormchaos.lc.sliding_window.mensetsu.Solution47;
 import com.wormchaos.lc.sliding_window.mensetsu.Solution61;
 import com.wormchaos.lc.sliding_window.normal.Solution1282;
+import com.wormchaos.lc.sliding_window.normal.Solution456;
 import com.wormchaos.lc.sliding_window.normal.Solution814;
 import com.wormchaos.lc.sliding_window.normal.Solution877;
 import com.wormchaos.lc.sliding_window.normal.Solution89;
@@ -303,10 +304,11 @@ public class RunMethod {
 //        new Solution289().gameOfLife(v);
 //        int matrix[][] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
 //        new Solution01_07().rotate(matrix);
-        ListNode result = new Solution445().addTwoNumbers(createListNode("2"), createListNode("9->9->9"));
+//        ListNode result = new Solution445().addTwoNumbers(createListNode("2"), createListNode("9->9->9"));
 //        ListNode result = new Solution445().addTwoNumbers(createListNode("0"), createListNode("1->8->4->0"));
 //        ListNode result = new Solution445().addTwoNumbers(createListNode("9->1->6"), createListNode("0"));
 //        ListNode result = new Solution445().addTwoNumbers(createListNode("1->2->7"), createListNode("9->8->7->3"));
+        boolean result = new Solution456().find132pattern(new int[]{1,-4,2,-1,3,-3,-4,0,-3,-1});
         System.out.println("time :" + (System.currentTimeMillis() - a));
         print(result);
     }

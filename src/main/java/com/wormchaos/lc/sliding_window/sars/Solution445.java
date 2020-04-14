@@ -2,7 +2,6 @@ package com.wormchaos.lc.sliding_window.sars;
 
 import com.wormchaos.lc.toolbean.ListNode;
 
-import java.util.Queue;
 import java.util.Stack;
 
 /**
