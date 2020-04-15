@@ -233,7 +233,7 @@ public class RunMethod {
 //        Object result = new Solution219().containsNearbyDuplicate(new int[]{1,1,1,1}, 1);
 //        Object result = new Solution125().isPalindrome("A man, a plan, a canal: Panama");
 //        int arr[][] = {{2,1,1},{1,1,0},{0,1,1}};
-        int arr[][] = {{2, 2, 2, 1, 1}};
+//        int arr[][] = {{2, 2, 2, 1, 1}};
 //        int arr[][] = {{1},{2},{1},{2}};
 //        [[2,1,1],[0,1,1],[1,0,1]]
 //        Object result = new Solution994().orangesRotting(arr);
@@ -308,7 +308,20 @@ public class RunMethod {
 //        ListNode result = new Solution445().addTwoNumbers(createListNode("0"), createListNode("1->8->4->0"));
 //        ListNode result = new Solution445().addTwoNumbers(createListNode("9->1->6"), createListNode("0"));
 //        ListNode result = new Solution445().addTwoNumbers(createListNode("1->2->7"), createListNode("9->8->7->3"));
-        boolean result = new Solution456().find132pattern(new int[]{1,-4,2,-1,3,-3,-4,0,-3,-1});
+//        boolean result = new Solution456().find132pattern(new int[]{1,-4,2,-1,3,-3,-4,0,-3,-1});
+        int[][] arr = new int[][]{
+                {1, 0, 1, 1, 0, 0, 1, 0, 0, 1},
+                {0, 1, 1, 0, 1, 0, 1, 0, 1, 1},
+                {0, 0, 1, 0, 1, 0, 0, 1, 0, 0},
+                {1, 0, 1, 0, 1, 1, 1, 1, 1, 1},
+                {0, 1, 0, 1, 1, 0, 0, 0, 0, 1},
+                {0, 0, 1, 0, 1, 1, 1, 0, 1, 0},
+                {0, 1, 0, 1, 0, 1, 0, 0, 1, 1},
+                {1, 0, 0, 0, 1, 1, 1, 1, 0, 1},
+                {1, 1, 1, 1, 1, 1, 1, 0, 1, 0},
+                {1, 1, 1, 1, 0, 1, 0, 0, 1, 1}
+        };
+        int[][] result = new Solution542().updateMatrix(arr);
         System.out.println("time :" + (System.currentTimeMillis() - a));
         print(result);
     }
