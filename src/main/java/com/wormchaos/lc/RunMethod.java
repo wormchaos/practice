@@ -8,6 +8,7 @@ import com.wormchaos.lc.sliding_window.mensetsu.Solution47;
 import com.wormchaos.lc.sliding_window.mensetsu.Solution61;
 import com.wormchaos.lc.sliding_window.normal.Solution1282;
 import com.wormchaos.lc.sliding_window.normal.Solution456;
+import com.wormchaos.lc.sliding_window.normal.Solution457;
 import com.wormchaos.lc.sliding_window.normal.Solution814;
 import com.wormchaos.lc.sliding_window.normal.Solution877;
 import com.wormchaos.lc.sliding_window.normal.Solution89;
@@ -309,21 +310,23 @@ public class RunMethod {
 //        ListNode result = new Solution445().addTwoNumbers(createListNode("9->1->6"), createListNode("0"));
 //        ListNode result = new Solution445().addTwoNumbers(createListNode("1->2->7"), createListNode("9->8->7->3"));
 //        boolean result = new Solution456().find132pattern(new int[]{1,-4,2,-1,3,-3,-4,0,-3,-1});
-        int[][] arr = new int[][]{
-                {1, 0, 1, 1, 0, 0, 1, 0, 0, 1},
-                {0, 1, 1, 0, 1, 0, 1, 0, 1, 1},
-                {0, 0, 1, 0, 1, 0, 0, 1, 0, 0},
-                {1, 0, 1, 0, 1, 1, 1, 1, 1, 1},
-                {0, 1, 0, 1, 1, 0, 0, 0, 0, 1},
-                {0, 0, 1, 0, 1, 1, 1, 0, 1, 0},
-                {0, 1, 0, 1, 0, 1, 0, 0, 1, 1},
-                {1, 0, 0, 0, 1, 1, 1, 1, 0, 1},
-                {1, 1, 1, 1, 1, 1, 1, 0, 1, 0},
-                {1, 1, 1, 1, 0, 1, 0, 0, 1, 1}
-        };
-        int[][] result = new Solution542().updateMatrix(arr);
+//        int[][] arr = new int[][]{
+//                {1, 0, 1, 1, 0, 0, 1, 0, 0, 1},
+//                {0, 1, 1, 0, 1, 0, 1, 0, 1, 1},
+//                {0, 0, 1, 0, 1, 0, 0, 1, 0, 0},
+//                {1, 0, 1, 0, 1, 1, 1, 1, 1, 1},
+//                {0, 1, 0, 1, 1, 0, 0, 0, 0, 1},
+//                {0, 0, 1, 0, 1, 1, 1, 0, 1, 0},
+//                {0, 1, 0, 1, 0, 1, 0, 0, 1, 1},
+//                {1, 0, 0, 0, 1, 1, 1, 1, 0, 1},
+//                {1, 1, 1, 1, 1, 1, 1, 0, 1, 0},
+//                {1, 1, 1, 1, 0, 1, 0, 0, 1, 1}
+//        };
+//        int[][] result = new Solution542().updateMatrix(arr);
+//        boolean result = new Solution457().circularArrayLoop(new int[]{-2,1,-1,-2,-2});
+//        boolean result = new Solution457().circularArrayLoop(new int[]{-1,2});
         System.out.println("time :" + (System.currentTimeMillis() - a));
-        print(result);
+//        print(result);
     }
 
     private static TreeNode converFromArray(Integer[] a) {
