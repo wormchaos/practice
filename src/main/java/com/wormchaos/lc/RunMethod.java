@@ -6,6 +6,7 @@ import com.wormchaos.lc.sliding_window.mensetsu.Solution07;
 import com.wormchaos.lc.sliding_window.mensetsu.Solution16_20;
 import com.wormchaos.lc.sliding_window.mensetsu.Solution47;
 import com.wormchaos.lc.sliding_window.mensetsu.Solution61;
+import com.wormchaos.lc.sliding_window.normal.Solution1248;
 import com.wormchaos.lc.sliding_window.normal.Solution1282;
 import com.wormchaos.lc.sliding_window.normal.Solution456;
 import com.wormchaos.lc.sliding_window.normal.Solution457;
@@ -325,8 +326,9 @@ public class RunMethod {
 //        int[][] result = new Solution542().updateMatrix(arr);
 //        boolean result = new Solution457().circularArrayLoop(new int[]{-2,1,-1,-2,-2});
 //        boolean result = new Solution457().circularArrayLoop(new int[]{-1,2});
+        int result = new Solution1248().numberOfSubarrays(new int[]{1,1,2,1,1}, 3);
         System.out.println("time :" + (System.currentTimeMillis() - a));
-//        print(result);
+        print(result);
     }
 
     private static TreeNode converFromArray(Integer[] a) {

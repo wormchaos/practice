@@ -1,13 +1,31 @@
 package com.wormchaos.lc.sliding_window.normal;
 
-import java.util.HashSet;
-import java.util.Set;
+
 
 /**
  * Created by wormchaos on 2020-4-14.
  */
 public class Solution456 {
-    public boolean find132pattern(int[] nums) {
+//    /**
+//     * 单调栈获取最小值
+//     * @param nums
+//     * @return
+//     */
+//    public boolean find132pattern(int[] nums) {
+//        Stack<Integer> stack = new Stack<>();
+//        int min = nums[nums.length - 1];
+//        for (int i = nums.length - 1; i >=0; i--) {
+//            while (!stack.isEmpty()) {
+//                if (stack.peek() > nums[i]) {
+//                    right[stack.pop()] == nums[i];
+//                }
+//            }
+//            stack.push(nums[i]);
+//        }
+//        return false;
+//    }
+
+    public boolean find132pattern_VSORT(int[] nums) {
         int[] left = new int[nums.length];
         int[] right = new int[nums.length];
         for (int i = 0; i < nums.length; i++) {
