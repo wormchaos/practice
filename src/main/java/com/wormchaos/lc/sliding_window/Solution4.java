@@ -15,6 +15,7 @@ public class Solution4 {
      */
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
         int n = nums1.length;
+
         int m = nums2.length;
         // 求中位数坐标 (n + m) / 2
         if((n + m) % 2 == 0) {
